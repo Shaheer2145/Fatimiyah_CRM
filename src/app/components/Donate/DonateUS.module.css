@@ -1,0 +1,190 @@
+.container {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 56, 147, 0.8), rgba(0, 24, 65, 0.9)), url('https://images.unsplash.com/photo-1538108149393-fbbd8189718c?q=80&w=2897&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heroBtn {
+    background-color: #ef4444;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+.heroBtn:hover {
+    transform: scale(1.05);
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #1e3a8a;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Bank Transfer */
+.bankContainer {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bankCard {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 300px;
+    border-left: 5px solid #1e3a8a;
+}
+
+.bankLabel {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.bankValue {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyBtn {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Sponsorship Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.cardHeader {
+    background: #eff6ff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #dbeafe;
+}
+
+.cardAmount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1d4ed8;
+}
+
+.cardBody {
+    padding: 24px;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.cardDesc {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cardBtn {
+    width: 100%;
+    padding: 12px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cardBtn:hover {
+    background: #1e40af;
+}
+
+/* FAQ */
+.faqItem {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 20px 0;
+}
+
+.faqQuestion {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.faqAnswer {
+    color: #475569;
+    line-height: 1.6;
+}

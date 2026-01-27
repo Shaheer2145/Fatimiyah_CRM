@@ -1,0 +1,569 @@
+﻿
+> fatmiyah_crm@0.1.0 build
+> next build
+
+   Γû▓ Next.js 16.0.10 (Turbopack)
+
+   Creating an optimized production build ...
+node.exe : 
+At C:\Program Files\nodejs\npm.ps1:29 
+char:3
++   & $NODE_EXE $NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpec 
+   ified: (:String) [], RemoteExcept  
+  ion
+    + FullyQualifiedErrorId : NativeC 
+   ommandError
+ 
+> Build error occurred
+Error: Turbopack build failed with 11 
+errors:
+./src/app/components/About/AboutUs.mod
+ule.css
+Error evaluating Node.js code
+Error: It looks like you're trying to 
+use `tailwindcss` directly as a 
+PostCSS plugin. The PostCSS plugin 
+has moved to a separate package, so 
+to continue using Tailwind CSS with 
+PostCSS you'll need to install 
+`@tailwindcss/postcss` and update 
+your PostCSS configuration.
+    [at lt (C:\VSCODE\fatmiyah_crm\nod
+e_modules\tailwindcss\dist\lib.js:38:1
+643)]
+    at turbopack:///[turbopack-node]/t
+ransforms/postcss.ts:56:14 [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__6d51cb5d._.js:165:20]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35]
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./src/app/components/About/AboutUs
+.module.css
+    
+./src/app/components/About/AboutUs.js
+    ./src/app/page.js
+
+
+./src/app/components/FAQ/FAQ.module.cs
+s
+Error evaluating Node.js code
+Error: It looks like you're trying to 
+use `tailwindcss` directly as a 
+PostCSS plugin. The PostCSS plugin 
+has moved to a separate package, so 
+to continue using Tailwind CSS with 
+PostCSS you'll need to install 
+`@tailwindcss/postcss` and update 
+your PostCSS configuration.
+    [at lt (C:\VSCODE\fatmiyah_crm\nod
+e_modules\tailwindcss\dist\lib.js:38:1
+643)]
+    at turbopack:///[turbopack-node]/t
+ransforms/postcss.ts:56:14 [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__6d51cb5d._.js:165:20]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35]
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26]
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/FAQ/FAQ.modul
+e.css [Client Component Browser]
+    ./src/app/components/FAQ/FAQ.js 
+[Client Component Browser]
+    ./src/app/components/FAQ/FAQ.js 
+[Server Component]
+    ./src/app/page.js [Server 
+Component]
+
+  Client Component SSR:
+    ./src/app/components/FAQ/FAQ.modul
+e.css [Client Component SSR]
+    ./src/app/components/FAQ/FAQ.js 
+[Client Component SSR]
+    ./src/app/components/FAQ/FAQ.js 
+[Server Component]
+    ./src/app/page.js [Server 
+Component]
+
+
+./src/app/components/Footer/Footer.mod
+ule.css
+Error evaluating Node.js code
+Error: It looks like you're trying to 
+use `tailwindcss` directly as a 
+PostCSS plugin. The PostCSS plugin 
+has moved to a separate package, so 
+to continue using Tailwind CSS with 
+PostCSS you'll need to install 
+`@tailwindcss/postcss` and update 
+your PostCSS configuration.
+    [at lt (C:\VSCODE\fatmiyah_crm\nod
+e_modules\tailwindcss\dist\lib.js:38:1
+643)]
+    at turbopack:///[turbopack-node]/t
+ransforms/postcss.ts:56:14 [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__6d51cb5d._.js:165:20]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35]
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./src/app/components/Footer/Footer
+.module.css
+    
+./src/app/components/Footer/Footer.js
+    ./src/app/page.js
+
+
+./src/app/components/Header/Header.mod
+ule.css
+Error evaluating Node.js code
+Error: It looks like you're trying to 
+use `tailwindcss` directly as a 
+PostCSS plugin. The PostCSS plugin 
+has moved to a separate package, so 
+to continue using Tailwind CSS with 
+PostCSS you'll need to install 
+`@tailwindcss/postcss` and update 
+your PostCSS configuration.
+    [at lt (C:\VSCODE\fatmiyah_crm\nod
+e_modules\tailwindcss\dist\lib.js:38:1
+643)]
+    at turbopack:///[turbopack-node]/t
+ransforms/postcss.ts:56:14 [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__6d51cb5d._.js:165:20]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35]
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26]
+
+Import traces:
+  Client Component Browser:
+    ./src/app/components/Header/Header
+.module.css [Client Component Browser]
+    
+./src/app/components/Header/Header.js 
+[Client Component Browser]
+    
+./src/app/components/Header/Header.js 
+[Server Component]
+    ./src/app/page.js [Server 
+Component]
+
+  Client Component SSR:
+    ./src/app/components/Header/Header
+.module.css [Client Component SSR]
+    
+./src/app/components/Header/Header.js 
+[Client Component SSR]
+    
+./src/app/components/Header/Header.js 
+[Server Component]
+    ./src/app/page.js [Server 
+Component]
+
+
+./src/app/components/Hero/Hero.module.
+css
+Error evaluating Node.js code
+Error: It looks like you're trying to 
+use `tailwindcss` directly as a 
+PostCSS plugin. The PostCSS plugin 
+has moved to a separate package, so 
+to continue using Tailwind CSS with 
+PostCSS you'll need to install 
+`@tailwindcss/postcss` and update 
+your PostCSS configuration.
+    [at lt (C:\VSCODE\fatmiyah_crm\nod
+e_modules\tailwindcss\dist\lib.js:38:1
+643)]
+    at turbopack:///[turbopack-node]/t
+ransforms/postcss.ts:56:14 [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__6d51cb5d._.js:165:20]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35]
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./src/app/components/Hero/Hero.mod
+ule.css
+    ./src/app/components/Hero/Hero.js
+    ./src/app/page.js
+
+
+./src/app/components/Medical/MedicalDe
+partments.module.css
+Error evaluating Node.js code
+Error: It looks like you're trying to 
+use `tailwindcss` directly as a 
+PostCSS plugin. The PostCSS plugin 
+has moved to a separate package, so 
+to continue using Tailwind CSS with 
+PostCSS you'll need to install 
+`@tailwindcss/postcss` and update 
+your PostCSS configuration.
+    [at lt (C:\VSCODE\fatmiyah_crm\nod
+e_modules\tailwindcss\dist\lib.js:38:1
+643)]
+    at turbopack:///[turbopack-node]/t
+ransforms/postcss.ts:56:14 [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__6d51cb5d._.js:165:20]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35]
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./src/app/components/Medical/Medic
+alDepartments.module.css
+    ./src/app/components/Medical/Medic
+alDepartments.js
+    ./src/app/page.js
+
+
+./src/app/components/News/NewsRoom.mod
+ule.css
+Error evaluating Node.js code
+Error: It looks like you're trying to 
+use `tailwindcss` directly as a 
+PostCSS plugin. The PostCSS plugin 
+has moved to a separate package, so 
+to continue using Tailwind CSS with 
+PostCSS you'll need to install 
+`@tailwindcss/postcss` and update 
+your PostCSS configuration.
+    [at lt (C:\VSCODE\fatmiyah_crm\nod
+e_modules\tailwindcss\dist\lib.js:38:1
+643)]
+    at turbopack:///[turbopack-node]/t
+ransforms/postcss.ts:56:14 [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__6d51cb5d._.js:165:20]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35]
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./src/app/components/News/NewsRoom
+.module.css
+    
+./src/app/components/News/NewsRoom.js
+    ./src/app/page.js
+
+
+./src/app/components/Services/Services
+247.module.css
+Error evaluating Node.js code
+Error: It looks like you're trying to 
+use `tailwindcss` directly as a 
+PostCSS plugin. The PostCSS plugin 
+has moved to a separate package, so 
+to continue using Tailwind CSS with 
+PostCSS you'll need to install 
+`@tailwindcss/postcss` and update 
+your PostCSS configuration.
+    [at lt (C:\VSCODE\fatmiyah_crm\nod
+e_modules\tailwindcss\dist\lib.js:38:1
+643)]
+    at turbopack:///[turbopack-node]/t
+ransforms/postcss.ts:56:14 [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__6d51cb5d._.js:165:20]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35]
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./src/app/components/Services/Serv
+ices247.module.css
+    ./src/app/components/Services/Serv
+ices247.js
+    ./src/app/page.js
+
+
+./src/app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to 
+use `tailwindcss` directly as a 
+PostCSS plugin. The PostCSS plugin 
+has moved to a separate package, so 
+to continue using Tailwind CSS with 
+PostCSS you'll need to install 
+`@tailwindcss/postcss` and update 
+your PostCSS configuration.
+    [at lt (C:\VSCODE\fatmiyah_crm\nod
+e_modules\tailwindcss\dist\lib.js:38:1
+643)]
+    at turbopack:///[turbopack-node]/t
+ransforms/postcss.ts:56:14 [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__6d51cb5d._.js:165:20]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35]
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client 
+Component Browser]
+    ./src/app/layout.js [Server 
+Component]
+
+
+./src/app/page.module.css
+Error evaluating Node.js code
+Error: It looks like you're trying to 
+use `tailwindcss` directly as a 
+PostCSS plugin. The PostCSS plugin 
+has moved to a separate package, so 
+to continue using Tailwind CSS with 
+PostCSS you'll need to install 
+`@tailwindcss/postcss` and update 
+your PostCSS configuration.
+    [at lt (C:\VSCODE\fatmiyah_crm\nod
+e_modules\tailwindcss\dist\lib.js:38:1
+643)]
+    at turbopack:///[turbopack-node]/t
+ransforms/postcss.ts:56:14 [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__6d51cb5d._.js:165:20]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35]
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26]
+
+Import trace:
+  Server Component:
+    ./src/app/page.module.css
+    ./src/app/page.js
+
+
+./src/app/styles/auth.module.css
+Error evaluating Node.js code
+Error: It looks like you're trying to 
+use `tailwindcss` directly as a 
+PostCSS plugin. The PostCSS plugin 
+has moved to a separate package, so 
+to continue using Tailwind CSS with 
+PostCSS you'll need to install 
+`@tailwindcss/postcss` and update 
+your PostCSS configuration.
+    [at lt (C:\VSCODE\fatmiyah_crm\nod
+e_modules\tailwindcss\dist\lib.js:38:1
+643)]
+    at turbopack:///[turbopack-node]/t
+ransforms/postcss.ts:56:14 [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__6d51cb5d._.js:165:20]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35]
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26]
+
+Import traces:
+  Client Component Browser:
+    ./src/app/styles/auth.module.css 
+[Client Component Browser]
+    ./src/app/login/page.js [Client 
+Component Browser]
+    ./src/app/login/page.js [Server 
+Component]
+
+  Client Component SSR:
+    ./src/app/styles/auth.module.css 
+[Client Component SSR]
+    ./src/app/login/page.js [Client 
+Component SSR]
+    ./src/app/login/page.js [Server 
+Component]
+
+
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35])
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26])
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35])
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26])
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35])
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26])
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35])
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26])
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35])
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26])
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35])
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26])
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35])
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26])
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35])
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26])
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35])
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26])
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35])
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26])
+    at Module.init (turbopack:///[turb
+opack-node]/transforms/postcss.ts:43:3
+3) [C:\VSCODE\fatmiyah_crm\.next\build
+\chunks\[root-of-the-server]__6d51cb5d
+._.js:155:35])
+    at run (turbopack:///[turbopack-no
+de]/ipc/evaluate.ts:77:20) [C:\VSCODE\
+fatmiyah_crm\.next\build\chunks\[root-
+of-the-server]__44695d76._.js:429:26])

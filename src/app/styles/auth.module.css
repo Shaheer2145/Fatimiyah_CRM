@@ -1,0 +1,159 @@
+.authContainer {
+    display: flex;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.imageSide {
+    flex: 1;
+    background-image: url('/hero-bg.png');
+    /* Using existing hero image or can be a new one */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.9), rgba(33, 150, 83, 0.8));
+    z-index: 1;
+}
+
+.imageContent {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+}
+
+.brandName {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.formSide {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    background-color: #fff;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+}
+
+.formHeader {
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 15px;
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.input:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 14px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.submitBtn:hover {
+    background-color: #27ae60;
+}
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.link {
+    color: #2ecc71;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.backHome {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #999;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    .imageSide {
+        display: none;
+    }
+
+    .formSide {
+        width: 100%;
+        padding: 40px 20px;
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "question": "How can I check online report?",
+        "answer": "You can check your reports online by visiting the E-Services section and entering your MR number."
+    },
+    {
+        "id": 2,
+        "question": "How to Get Online Appointment in Fatimiyah Hospital?",
+        "answer": "Click on the 'Make an Appointment' button on the homepage or call our 24/7 helpline."
+    },
+    {
+        "id": 3,
+        "question": "Is the 24/7 Pharmacy open to general public?",
+        "answer": "Yes, our pharmacy serves both inpatients and outpatients 24/7."
+    },
+    {
+        "id": 4,
+        "question": "What are the visiting hours?",
+        "answer": "Visiting hours are from 4:00 PM to 8:00 PM daily."
+    }
+]

@@ -1,0 +1,155 @@
+.footer {
+    background-color: #f8f9fa;
+    padding-top: 100px;
+    border-top: none;
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding-bottom: 60px;
+    padding-left: 64px;
+    padding-right: 64px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.logoText {
+    color: var(--primary-green);
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.hospitalText {
+    color: #c0392b;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+}
+
+.brandText {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+}
+
+.socials a:hover {
+    color: var(--primary-green);
+}
+
+.colTitle {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.links a {
+    color: #666;
+    font-size: 14px;
+}
+
+.links a:hover {
+    color: var(--primary-green);
+    padding-left: 5px;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.contactInfo p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mapThumb {
+    width: 100%;
+    height: 80px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.mapPlaceholder {
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 12px;
+}
+
+.copyright {
+    background-color: #1a252f;
+    color: #aaa;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* RESPONSIVE: 780px */
+@media (max-width: 780px) {
+    .footer {
+        padding-top: 60px;
+    }
+
+    .footerContent {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+/* RESPONSIVE: 480px */
+@media (max-width: 480px) {
+    .footerContent {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 32px;
+    }
+}
+
+/* RESPONSIVE: 360px */
+@media (max-width: 360px) {
+    .footer {
+        padding-top: 40px;
+    }
+
+    .footerContent {
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 24px;
+    }
+
+    .colTitle {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .logoText {
+        font-size: 20px;
+    }
+}

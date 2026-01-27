@@ -1,0 +1,22 @@
+[
+    {
+        "id": 101,
+        "patientId": 1,
+        "doctorId": 1,
+        "doctorName": "Dr. Sarah Ahmed",
+        "date": "2025-12-25",
+        "time": "10:00 AM",
+        "status":["confirmed","pending","cancelled"],
+        "notes": "Follow-up appointment for blood test results."
+    },
+    {
+        "id": 102,
+        "patientId": 1,
+        "doctorId": 3,
+        "doctorName": "Dr. Fatima Khan",
+        "date": "2025-12-28",
+        "time": "02:00 PM",
+        "status":["confirmed","pending","cancelled"],
+        "notes": "Initial consultation for allergy symptoms."
+    }
+]

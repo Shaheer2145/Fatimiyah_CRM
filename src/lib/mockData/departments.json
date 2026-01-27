@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "name": "Dermatologist",
+        "icon": "hand",
+        "description": "The specialists who treat skin problems are called dermatologists or skin specialists.",
+        "doctorCount": 1322
+    },
+    {
+        "id": 2,
+        "name": "ENT Specialist",
+        "icon": "ent",
+        "description": "Specialists who diagnose and treat diseases of the ear, nose, and throat.",
+        "doctorCount": 854
+    },
+    {
+        "id": 3,
+        "name": "Gynecologist",
+        "icon": "gynae",
+        "description": "Gynecologists are those specialists that treat women reproductive issues & child birth.",
+        "doctorCount": 3337
+    },
+    {
+        "id": 4,
+        "name": "Urologist",
+        "icon": "kidney",
+        "description": "Urologists are specialist who diagnose, treat and manage conditions that affect reproductive and bladder health in men.",
+        "doctorCount": 659
+    },
+    {
+        "id": 5,
+        "name": "Neurologist",
+        "icon": "brain",
+        "description": "Doctors who visualize the brain and nervous system to diagnose and treat neurological disorders.",
+        "doctorCount": 520
+    },
+    {
+        "id": 6,
+        "name": "Orthopedic Surgeon",
+        "icon": "leg",
+        "description": "Specialists focused on injuries and diseases affecting the musculoskeletal system.",
+        "doctorCount": 945
+    },
+    {
+        "id": 7,
+        "name": "Gastroenterologist",
+        "icon": "stomach",
+        "description": "Doctors who specialize in the digestive system and its disorders.",
+        "doctorCount": 430
+    },
+    {
+        "id": 8,
+        "name": "Dentist",
+        "icon": "dentist",
+        "description": "Medical professionals who diagnose and treat problems with patients' teeth, gums, and related parts of the mouth.",
+        "doctorCount": 1500
+    },
+    {
+        "id": 9,
+        "name": "Obesity Specialist",
+        "icon": "obesity",
+        "description": "Medical experts who help patients manage and reduce obesity through various treatments.",
+        "doctorCount": 210
+    },
+    {
+        "id": 10,
+        "name": "Eye Specialist",
+        "icon": "eye",
+        "description": "Doctors who specialize in eye and vision care, including treating eye diseases.",
+        "doctorCount": 1100
+    },
+    {
+        "id": 11,
+        "name": "Child Specialist",
+        "icon": "child",
+        "description": "Doctors specializing in the health and medical care of infants, children, and adolescents.",
+        "doctorCount": 1850
+    }
+]
