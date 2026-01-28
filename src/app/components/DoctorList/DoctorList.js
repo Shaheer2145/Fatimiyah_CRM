@@ -76,7 +76,6 @@ const DoctorList = ({ doctors }) => {
                     </div>
 
                     <button className={styles.btn}>Clear Filters</button>
-                    
                     <button className={styles.btn}>Fee upto 500</button>
                     <button className={styles.btn}>Top Reviewed</button>
 
