@@ -8,25 +8,42 @@ import signup from "../../assets/signup.png";
 import logo from "../../assets/fatmiyahLogo.png";
 import { useAuth } from '@/hooks/useAuth';
 import departments from "../../../lib/mockData/departments.json"
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 
 
 
 
 const Header = () => {
-    const [isOpen, setIsopen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+    const dropdownRef = useRef(null);
 
-    const openMenu = () => {
-        setIsopen(!isOpen);
-    }
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     const closeMenu = () => {
-        setIsopen(false);
-    }
+        setIsOpen(false);
+    };
+
+    // Close dropdown on click outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                closeMenu();
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
     const { user, logout } = useAuth();
 
-    // Determine dashboard path based on role
     const getDashboardPath = () => {
         if (!user) return '/';
         if (user.role === 'admin') return '/dashboard/admin';
@@ -37,6 +54,13 @@ const Header = () => {
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
+
+    const navItems = [
+        { label: 'Home', href: '/' },
+        { label: 'Schedule', href: '/schedule' },
+        { label: 'Facilities', href: '/facilities' },
+        { label: 'Online Lab Report', href: '/online-lab-report' },
+    ];
 
     return (
         <header className={styles.header}>
@@ -89,33 +113,51 @@ const Header = () => {
                     {/* Navigation Items */}
                     <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.mobileNavOpen : ''}`}>
                         <ul className={styles.navLinks}>
-                            <li><Link href="/" className={styles.active}>Home</Link></li>
-                            
-                            <li><Link href="/schedule">Schedule</Link></li>
-                            <li><Link href={"/facilities"}>Facilities</Link></li>
-                            <li><Link href={"/online-lab-report"}>Online Lab Report</Link></li>
+                            {navItems.map((item) => (
+                                <li key={item.href}>
+                                    <Link
+                                        href={item.href}
+                                        className={pathname === item.href ? styles.active : ''}
+                                    >
+                                        {item.label}
+                                    </Link>
+                                </li>
+                            ))}
+
                             <li
-                                onClick={() => openMenu()}
-                                onDoubleClick={() => closeMenu()}
+                                className={styles.dropdownContainer}
+                                ref={dropdownRef}
                             >
-                                Dr Schedule
-                                {isOpen && (
-                                    <ul className={styles.dropdownToggle}>
-                                        {departments.map((dept, id) => {
-                                            return (
+                                <button
+                                    className={`${styles.dropdownBtn} ${pathname.startsWith('/doctors') ? styles.active : ''}`}
+                                    onClick={toggleMenu}
+                                >
+                                    Dr Schedule
+                                </button>
+
+                                <AnimatePresence>
+                                    {isOpen && (
+                                        <motion.ul
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: 10 }}
+                                            className={styles.dropdownToggle}
+                                        >
+                                            {departments.map((dept, id) => (
                                                 <li key={id}>
-                                                    <Link href={"/doctors"}>{dept.name}</Link>
+                                                    <Link href={`/doctors?dept=${dept.slug}`} onClick={closeMenu}>
+                                                        {dept.name}
+                                                    </Link>
                                                 </li>
-                                            )
-                                        })}
-                                    </ul>
-                                )}
+                                            ))}
+                                        </motion.ul>
+                                    )}
+                                </AnimatePresence>
                             </li>
                             <li>
                                 <Link href={"/contact"} className={styles.contactBtnNav}>Contact Us</Link>
                             </li>
                         </ul>
-
                     </nav>
                 </div>
             </div>

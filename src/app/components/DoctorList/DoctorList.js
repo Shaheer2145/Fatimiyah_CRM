@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./DoctorList.module.css";
 import { Search, Zap } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ProfileModal, ScheduleModal } from "./DoctorModals";
 import doctors from "@/lib/mockData/doctors.json";
@@ -48,24 +49,34 @@ const DoctorList = ({ doctors }) => {
 
     return (
         <>
-            <Header/>
+            <Header />
             <section className={styles.box}>
 
-                <div className={styles.upper_section}>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={styles.upper_section}
+                >
                     <h1 className={styles.mainHeading}> {doctors.category}Doctors in Fatimiyah</h1>
-                    <p className={styles.para}></p>
-                </div>
-                <div className={styles.filterSection}>
+                    <p className={styles.para}>Expert care across all specialties. Find and book your specialist today.</p>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                    className={styles.filterSection}
+                >
                     <div className={styles.searchWrapper}>
                         <input
                             type="text"
                             placeholder={placeholder[cindex]}
                         />
-                        <Search />  
+                        <Search />
                     </div>
 
                     <button className={styles.btn}>Clear Filters</button>
-                    <button className={styles.btn}>Doctors Near Me</button>
+                    
                     <button className={styles.btn}>Fee upto 500</button>
                     <button className={styles.btn}>Top Reviewed</button>
 
@@ -82,47 +93,67 @@ const DoctorList = ({ doctors }) => {
                             <option value={fee} key={fee}>{fee}</option>
                         ))}
                     </select>
-                </div>
+                </motion.div>
 
 
 
                 {/* main page */}
-                {doctors.map((doc) => (
-                    <>
-                        <div className={styles.container}>
-
-                            <div className={styles.doctorInfo} key={doc.id}>
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: { staggerChildren: 0.1 }
+                        }
+                    }}
+                    className={styles.listContainer}
+                >
+                    {doctors.map((doc, idx) => (
+                        <motion.div
+                            key={doc.id || idx}
+                            variants={{
+                                hidden: { opacity: 0, y: 20 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                            whileHover={{ y: -5 }}
+                            className={styles.container}
+                        >
+                            <div className={styles.doctorInfo}>
                                 <div className={styles.card1}>
-                                    {/* main box */}
-                                    <Image src="https://picsum.photos/200/300" alt="Doctor" className={styles.docImage} width="150" height="150" />
+                                    <div className={styles.imageWrapper}>
+                                        <Image src="" alt="Doctor" className={styles.docImage} width="150" height="150" />
+                                    </div>
                                 </div>
 
                                 <div className={styles.card2}>
-                                    <h1 className={styles.name}>{doc.name} </h1>
-                                    <p className={styles.verify}>
-                                        {doc.pmdcVerified === true ? "PMDC Verified" : " "}
-                                    </p>
+                                    <div className={styles.nameHeader}>
+                                        <h2 className={styles.name}>{doc.name}</h2>
+                                        {doc.pmdcVerified && (
+                                            <span className={styles.verifyBadge}>PMDC Verified</span>
+                                        )}
+                                    </div>
                                     <p className={styles.specs}>{doc.specialization}</p>
                                     <p className={styles.qualify}>{doc.qualification}</p>
-                                    <h5 className={styles.category}>{doc.category}</h5>
+                                    <span className={styles.categoryLabel}>{doc.category}</span>
+
                                     <div className={styles.stats}>
-                                        <div className={styles.sItems}>
-                                            <h4 className={styles.reviews}>Reviews</h4>
-                                            <p>{doc.reviews}</p>
+                                        <div className={styles.sItem}>
+                                            <span className={styles.statLabel}>Reviews</span>
+                                            <span className={styles.statValue}>{doc.reviews}</span>
                                         </div>
 
-                                        <div className={styles.sItems}>
-                                            <h4 className={styles.experience}>Experience </h4>
-                                            <p>{doc.experience}</p>
+                                        <div className={styles.sItem}>
+                                            <span className={styles.statLabel}>Experience</span>
+                                            <span className={styles.statValue}>{doc.experience}</span>
                                         </div>
 
-                                        <div className={styles.sItems}>
-                                            <h4 className={styles.satisfy}>Satisfaction </h4>
-                                            <p>{doc.satisfaction}%</p>
+                                        <div className={styles.sItem}>
+                                            <span className={styles.statLabel}>Satisfaction</span>
+                                            <span className={styles.statValue}>{doc.satisfaction}%</span>
                                         </div>
-
                                     </div>
-
                                 </div>
 
                                 <div className={styles.card3}>
@@ -133,17 +164,15 @@ const DoctorList = ({ doctors }) => {
                                         View Profile
                                     </button>
                                     <button
-                                        className={styles.viewBtn}
-                                        style={{ marginTop: '10px' }}
+                                        className={styles.scheduleBtn}
                                         onClick={() => openSchedule(doc)}
                                     >
-                                        Schedule a booking
+                                        Schedule booking
                                     </button>
                                 </div>
-
                             </div>
+
                             <div className={styles.pricing}>
-                                {/* Mock Data for Schedule Cards - varying content to match image */}
                                 <div className={styles.scheduleCard}>
                                     <div className={styles.cardHeader}>
                                         <span className={styles.consultationTitle}>Video Consultation</span>
@@ -152,30 +181,32 @@ const DoctorList = ({ doctors }) => {
                                             Fast Confirm
                                         </div>
                                     </div>
-                                    <p className={styles.availability}>Available Today</p>
-                                    <p className={styles.price}>Rs. 700</p>
+                                    <div className={styles.cardFooter}>
+                                        <p className={styles.availability}>Available Today</p>
+                                        <p className={styles.price}>Rs. 700</p>
+                                    </div>
                                 </div>
 
                                 <div className={styles.scheduleCard}>
                                     <div className={styles.cardHeader}>
-                                        <span className={styles.consultationTitle}>Nehal Hospital, Malir, Karachi</span>
+                                        <span className={styles.consultationTitle}>Hospital Visit</span>
                                         <div className={styles.badge}>
                                             <Zap size={12} fill="currentColor" />
                                             Fast Confirm
                                         </div>
                                     </div>
-                                    <p className={styles.availability}>Available Today</p>
-                                    <p className={styles.price}>Rs. 700</p>
+                                    <div className={styles.cardFooter}>
+                                        <p className={styles.availability}>Available Tomorrow</p>
+                                        <p className={styles.price}>Rs. 1,000</p>
+                                    </div>
                                 </div>
-
-
                             </div>
-                        </div>
-                    </>
-                ))}
+                        </motion.div>
+                    ))}
+                </motion.div>
 
             </section>
-            <Footer/>
+            <Footer />
 
             {/* Modals */}
             {profileModalOpen && (

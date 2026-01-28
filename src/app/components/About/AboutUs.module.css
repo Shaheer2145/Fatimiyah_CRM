@@ -6,7 +6,9 @@
     justify-content: center;
     align-items: center;
     gap: 235px;
-    margin: 5% 0;
+    /* max-width:1752px; */
+    margin-top:5%;
+
 }
 
 .aboutContent {
@@ -16,6 +18,7 @@
     justify-content: space-between;
     width: 90%;
     padding: 0 48px;
+    max-width:1550px;
 }
 
 .textContent {

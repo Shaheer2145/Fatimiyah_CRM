@@ -22,6 +22,11 @@ const doctorSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    status:{
+        type:String,
+        enum:["Available","Off-duty","In-consultation","On-leave"],
+        default:"Available"
+    },
     specialization: [String],
     category: {
         type: String,

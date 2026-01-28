@@ -37,19 +37,27 @@
 }
 
 .iconCircle {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff; 
+  background-color: rgba(217, 73, 72, 0.1);
+  /* Soft red background */
+  border-radius: 50%;
   flex-shrink: 0;
-
-  
+  transition: all 0.3s ease;
 }
-.icon{
-    color: #ffffff;
-    fill: red;
+
+.iconCircle:hover {
+  background-color: rgba(217, 73, 72, 0.2);
+  transform: scale(1.1);
+}
+
+.icon {
+  color: rgb(217, 73, 72);
+  fill: rgba(217, 73, 72, 0.1);
+  /* Subtle fill for "parts" */
 }
 
 .location,
@@ -59,7 +67,7 @@
   align-items: center;
   gap: 14px;
 
-  
+
 }
 
 
@@ -92,7 +100,7 @@
 }
 
 .form textarea {
-    grid-column: span 2;
+  grid-column: span 2;
   resize: none;
   height: 120px;
 }
@@ -106,7 +114,7 @@
 .submitBtn {
   margin-top: 10px;
   padding: 14px;
-  background-color:rgb(217,73,72);
+  background-color: rgb(217, 73, 72);
   color: #fff;
   font-size: 15px;
   font-weight: 600;
@@ -119,30 +127,35 @@
 /* Contact.module.css */
 
 .successText {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background-color: #d1fae5; /* Soft light green */
-    color: #065f46;            /* Darker green text for contrast */
-    border: 1px solid #10b981; /* Solid green border */
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    text-align: center;
-    
-    /* Animation to make it "pop" in nicely */
-    animation: fadeIn 0.4s ease-out forwards;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #d1fae5;
+  /* Soft light green */
+  color: #065f46;
+  /* Darker green text for contrast */
+  border: 1px solid #10b981;
+  /* Solid green border */
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+
+  /* Animation to make it "pop" in nicely */
+  animation: fadeIn 0.4s ease-out forwards;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 /* RESPONSIVE */
 @media (max-width: 992px) {
   .contactPage {

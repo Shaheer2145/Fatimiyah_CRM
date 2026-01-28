@@ -1,39 +1,48 @@
 .footer {
     background-color: #f8f9fa;
-    padding-top: 100px;
-    border-top: none;
+    /* padding-top: 100px; */
+    border-top: 1px solid #eee;
+    position: relative;
 }
 
 .footerContent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    padding-bottom: 60px;
-    padding-left: 64px;
-    padding-right: 64px;
-    max-width: 1920px;
+    width: 100%;
+    max-width: var(--container-max-width);
+    padding: 32px 64px;
     margin: 0 auto;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    margin-bottom: 20px;
 }
 
 .logoText {
     color: var(--primary-green);
-    font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: 26px;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .hospitalText {
     color: #c0392b;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    display: block;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 0.8em;
 }
 
 .brandText {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 1.6;
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom:15px;
+    line-height: 1.7;
 }
 
 .socials {
@@ -41,84 +50,170 @@
     gap: 15px;
 }
 
+.socials a {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
 .socials a:hover {
-    color: var(--primary-green);
+    color: var(--hover-color, #09B200);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 
 .colTitle {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 25px;
+    color: #1e293b;
+    position: relative;
+}
+
+.colTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--primary-green);
+    border-radius: 2px;
 }
 
 .links {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
 }
 
 .links a {
-    color: #666;
-    font-size: 14px;
+    color: #64748b;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
 }
 
 .links a:hover {
     color: var(--primary-green);
-    padding-left: 5px;
+    transform: translateX(5px);
 }
 
 .contactInfo {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    font-size: 14px;
-    color: #666;
+    gap: 18px;
+    font-size: 15px;
+    color: #64748b;
 }
 
 .contactInfo p {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0;
+}
+
+.contactIcon {
+    color: #c0392b;
+    margin-top: 3px;
 }
 
 .mapThumb {
     width: 100%;
-    height: 80px;
-    border-radius: 4px;
+    height: 100px;
+    border-radius: 12px;
     overflow: hidden;
     margin-bottom: 10px;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mapThumb:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .mapPlaceholder {
     width: 100%;
     height: 100%;
-    background-color: #ddd;
+    background-color: #f1f5f9;
+    background-image: linear-gradient(rgba(241, 245, 249, 0.8), rgba(241, 245, 249, 0.8)), url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=400');
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #888;
-    font-size: 12px;
+    color: #004D71;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.mapThumb:hover .mapPlaceholder {
+    background-image: linear-gradient(rgba(0, 77, 113, 0.1), rgba(0, 77, 113, 0.1)), url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=400');
 }
 
 .copyright {
-    background-color: #1a252f;
-    color: #aaa;
-    padding: 20px 0;
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 25px 0;
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* RESPONSIVE: 780px */
-@media (max-width: 780px) {
+/* Scroll Top Button */
+.scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(9, 178, 0, 0.3);
+    z-index: 999;
+}
+
+/* RESPONSIVE: 1024px */
+@media (max-width: 1024px) {
+    .footerContent {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+}
+
+/* RESPONSIVE: 768px */
+@media (max-width: 768px) {
     .footer {
         padding-top: 60px;
     }
 
     .footerContent {
-        grid-template-columns: repeat(2, 1fr);
-        padding-left: 32px;
-        padding-right: 32px;
+        gap: 40px;
+    }
+
+    .scrollTop {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
     }
 }
 
@@ -126,30 +221,28 @@
 @media (max-width: 480px) {
     .footerContent {
         grid-template-columns: 1fr;
-        padding-left: 20px;
-        padding-right: 20px;
-        gap: 32px;
-    }
-}
-
-/* RESPONSIVE: 360px */
-@media (max-width: 360px) {
-    .footer {
-        padding-top: 40px;
+        gap: 40px;
+        text-align: center;
     }
 
-    .footerContent {
-        padding-left: 16px;
-        padding-right: 16px;
-        gap: 24px;
+    .col {
+        align-items: center;
     }
 
-    .colTitle {
-        font-size: 15px;
-        margin-bottom: 12px;
+    .socials {
+        justify-content: center;
     }
 
-    .logoText {
-        font-size: 20px;
+    .links a:hover {
+        transform: translateY(-2px);
+    }
+
+    .colTitle::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contactInfo p {
+        justify-content: center;
     }
 }

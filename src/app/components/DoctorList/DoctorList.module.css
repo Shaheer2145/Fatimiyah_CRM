@@ -1,177 +1,239 @@
 .box {
-  border: 1px solid red;
-  background-color: rgb(236, 236, 242);
-  color: #000;
+  background-color: #f8fafc;
+  color: #1e293b;
   width: 100%;
   box-sizing: border-box;
-  padding: 48px;
+  padding: 60px 40px;
+  min-height: 100vh;
 }
 
 .mainHeading {
-  font-size: 48px;
-  font-weight: 500;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.para {
+  color: #64748b;
+  font-size: 18px;
 }
 
 .upper_section {
-  border: 1px solid blue;
-  padding: 0 24px;
-  margin: 32px 0;
+  padding: 0 10px;
+  margin-bottom: 40px;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .container {
-  background: #f5f5f5;
-  border-radius: 24px;
-  padding: 0px 24px;
-  box-shadow: 0px 4px 4px rgba(124, 123, 123, 0.25);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   width: 100%;
-  max-width: 1400px;
-  margin: 24px auto;
+  max-width: 1280px;
+  margin: 0 auto;
   box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.container:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .doctorInfo {
   display: flex;
-  justify-content: space-around;
+  gap: 30px;
   width: 100%;
+  align-items: flex-start;
+}
+
+.imageWrapper {
+  position: relative;
+  padding: 5px;
+  background: linear-gradient(135deg, #004D71, #0088cc);
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
 }
 
 .docImage {
-  border-radius: 200px;
-  width: 180px;
-  height: 180px;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border: 4px solid white;
 }
 
-.card1,
-.card2,
-.card3 {
-  margin-top: 16px;
-  max-width: 100%;
-  min-height: 260px;
-  box-sizing: border-box;
-
+.card1 {
+  flex: 0 0 auto;
 }
-
-.card1,
-.card3 {
-  flex: 1 1 20%;
-  padding: 14px 32px;
-}
-
 
 .card2 {
-  flex: 1 1 60%;
+  flex: 1;
 }
 
 .card3 {
+  flex: 0 0 280px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin-left: 5%; */
   flex-direction: column;
+  gap: 12px;
 }
 
-
-.viewBtn {
-  padding: 10px 20px;
-  background-color: #004D71;
-  height: 51px;
-  width: 100%;
-  max-width: 298px;
-  border-radius: 8px;
-  color: #f5f5f5;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.info {
-  margin-top: 24px;
-}
-
-.heading {
-  font-size: 24px;
+.nameHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
 }
 
 .name {
-  text-decoration: underline;
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
 }
 
-.verify {
-  color: gray
+.verifyBadge {
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #bbf7d0;
 }
 
-.specs,
+.specs {
+  font-size: 18px;
+  color: #004D71;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
 .qualify {
-  letter-spacing: 1.2px;
-  font-family: sans-serif;
+  color: #64748b;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.categoryLabel {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 24px;
 }
 
 .stats {
-  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  gap: 40px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
 }
 
-.reviews,
-.experience,
-.satisfy {
-  color: #000;
-  font-weight: bold;
+.sItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  color: #94a3b8;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.statValue {
+  color: #1e293b;
   font-size: 18px;
+  font-weight: 700;
+}
+
+.viewBtn,
+.scheduleBtn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.viewBtn {
+  background-color: transparent;
+  color: #004D71;
+  border: 2px solid #004D71;
+}
+
+.viewBtn:hover {
+  background-color: #f0f9ff;
+}
+
+.scheduleBtn {
+  background-color: #004D71;
+  color: white;
+  border: none;
+}
+
+.scheduleBtn:hover {
+  background-color: #003a55;
+  transform: translateY(-2px);
 }
 
 .pricing {
-  margin-top: 24px;
+  margin-top: 30px;
   display: flex;
+  gap: 20px;
   overflow-x: auto;
-  gap: 16px;
-  padding-bottom: 8px;
-  /* For scrollbar spacing */
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-.pricing::-webkit-scrollbar {
-  display: none;
+  padding-bottom: 10px;
 }
 
 .scheduleCard {
-  min-width: 300px;
-  border: 1px solid #005f73;
-  /* Teal/Dark Blue border */
-  border-radius: 8px;
-  padding: 16px;
-  background-color: white;
+  min-width: 280px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #f8fafc;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
-  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.scheduleCard:hover {
+  border-color: #004D71;
+  background-color: #f0f9ff;
 }
 
 .cardHeader {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .consultationTitle {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  color: #005f73;
-  margin-right: 8px;
-  line-height: 1.2;
+  color: #1e293b;
+  line-height: 1.4;
 }
 
 .badge {
-  background-color: #e0f2f1;
-  color: #00695c;
+  background-color: #dcfce7;
+  color: #166534;
   font-size: 10px;
   font-weight: 700;
   padding: 4px 8px;
@@ -179,88 +241,92 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  white-space: nowrap;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .availability {
   font-size: 14px;
-  color: #555;
-  margin-bottom: 12px;
+  color: #64748b;
 }
 
 .price {
-  font-size: 16px;
-  font-weight: 700;
-  color: #000;
+  font-size: 18px;
+  font-weight: 800;
+  color: #004D71;
 }
-
-
-
-
 
 /* filter section */
 .filterSection {
   display: flex;
-  /* justify-content: flex-start; */
   align-items: center;
-  /* vertically center all items */
-  gap: 22px;
-  /* spacing between elements */
-  padding: 10px 20px;
-  background-color: #f5f5f5;
+  gap: 16px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   flex-wrap: wrap;
-  flex-direction: row;
+  border: 1px solid #f1f5f9;
 }
 
-/* Input + Search wrapper */
 .searchWrapper {
   display: flex;
   align-items: center;
-  border-radius: 6px;
-  overflow: hidden;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0 12px;
+  flex: 1;
+  min-width: 300px;
 }
 
 .searchWrapper input {
   border: none;
-  padding: 6px 12px;
+  background: transparent;
+  padding: 12px;
   outline: none;
-  color: rgb(0, 0, 0);
-  width: 400px;
-  /* adjust as needed */
+  color: #1e293b;
+  width: 100%;
+  font-size: 16px;
 }
 
 .searchWrapper svg {
-  background-color: #6a0dad;
-  /* darker purple for search icon bg */
-  padding: 6px;
-  cursor: pointer;
-  fill: white;
-  /* icon color */
-  height: auto;
+  color: #94a3b8;
 }
 
-/* Buttons */
 .btn {
-  background-color: #add8e6;
-  /* light blue */
+  background-color: #f1f5f9;
+  color: #475569;
   border: none;
-  border-radius: 4px;
-  padding: 6px 12px;
+  border-radius: 8px;
+  padding: 10px 18px;
   cursor: pointer;
   font-size: 14px;
-  transition: background 0.3s;
+  font-weight: 600;
+  transition: all 0.2s;
 }
 
 .btn:hover {
-  background-color: #87cefa;
-  /* slightly darker blue on hover */
+  background-color: #e2e8f0;
+  color: #1e293b;
 }
 
-/* Dropdowns */
 .selectBox {
-  padding: 6px 10px;
-  border-radius: 4px;
-  border: 2px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: white;
   font-size: 14px;
-  outline: gray;
+  color: #475569;
+  outline: none;
+  cursor: pointer;
+}
+
+.selectBox:focus {
+  border-color: #004D71;
 }

@@ -37,22 +37,32 @@ const FAQ = () => {
 
                     <div className={styles.accordion}>
                         {faqData.map((item, index) => (
-                            <div key={index} className={`${styles.faqItem} ${activeIndex === index ? styles.active : ''}`}>
-                                <div className={styles.questionHead} onClick={() => toggleFAQ(index)}>
+                            <div key={index} className={styles.faqItem}>
+                                <div
+                                    className={`${styles.questionHead} ${activeIndex === index ? styles.active : ''}`}
+                                    onClick={() => toggleFAQ(index)}
+                                >
                                     <h3>{item.question}</h3>
-                                    {activeIndex === index ? <Minus size={32} /> : <Plus size={32} />}
+                                    <motion.div
+                                        animate={{ rotate: activeIndex === index ? 180 : 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        className={styles.iconWrapper}
+                                    >
+                                        {activeIndex === index ? <Minus size={24} /> : <Plus size={24} />}
+                                    </motion.div>
                                 </div>
-                                <AnimatePresence>
+                                <AnimatePresence initial={false}>
                                     {activeIndex === index && (
                                         <motion.div
                                             initial={{ height: 0, opacity: 0 }}
                                             animate={{ height: "auto", opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.3 }}
+                                            transition={{ duration: 0.3, ease: "easeInOut" }}
                                             className={styles.answerBody}
-                                            style={{ maxHeight: 'none', padding: '10px 0px 20px 0px' }}
                                         >
-                                            <p>{item.answer}</p>
+                                            <div className={styles.answerContent}>
+                                                <p>{item.answer}</p>
+                                            </div>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>

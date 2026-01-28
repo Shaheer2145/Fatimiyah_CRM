@@ -73,18 +73,27 @@
 }
 
 .answerBody {
-    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
 }
 
-.faqItem.active .answerBody {
-    max-height: 300px;
+.answerContent {
     padding-bottom: 20px;
+    padding-top: 5px;
 }
 
-.faqItem.active .questionHead {
-    color: var(--primary-green);
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.questionHead.active .iconWrapper {
+    color: #D0474F;
+}
+
+.questionHead.active h3 {
+    color: #D0474F;
 }
 
 /* RESPONSIVE: 780px */

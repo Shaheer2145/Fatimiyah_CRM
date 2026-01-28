@@ -7,7 +7,7 @@ export async function GET() {
     try{
         await dbConnect();
 
-        const allDoctors = await Doctors.find({});
+        const allDoctors = await Doctors.find({}).populate('appointments');
         return NextResponse.json({Doctors:allDoctors},{status:200});
     }
     catch(err){
