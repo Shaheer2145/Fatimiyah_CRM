@@ -1,0 +1,113 @@
+.section {
+    padding: 60px 0 100px;
+    background: white;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.banner {
+    background: #1DA1F2;
+    border-radius: 40px;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+}
+
+.contactInfo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.iconCircle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1DA1F2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.textGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.subText {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.number {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.indicator247 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.imageWrapper {
+    position: relative;
+    height: 300px;
+    align-self: flex-end;
+}
+
+.doctorImg {
+    height: 120%;
+    width: auto;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+}
+
+@media (max-width: 1024px) {
+    .banner {
+        flex-direction: column;
+        padding: 40px;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .contactInfo {
+        flex-direction: column;
+    }
+
+    .imageWrapper {
+        display: none;
+    }
+
+    .number {
+        font-size: 32px;
+    }
+}

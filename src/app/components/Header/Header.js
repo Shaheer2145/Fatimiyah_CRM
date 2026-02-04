@@ -57,9 +57,12 @@ const Header = () => {
 
     const navItems = [
         { label: 'Home', href: '/' },
+        { label: 'About Us', href: '/about' },
         { label: 'Schedule', href: '/schedule' },
         { label: 'Facilities', href: '/facilities' },
         { label: 'Online Lab Report', href: '/online-lab-report' },
+        { label: 'Dr Schedule', href: '/dr-schedule' },
+
     ];
 
     return (
@@ -84,7 +87,7 @@ const Header = () => {
                             <>
                                 <Image src={Login} alt='login' />
                                 <Link href="/login">Login</Link>
-                                <span >|</span>
+
                                 <Image src={signup} alt='login' />
                                 <Link href="/register">Register</Link>
                             </>
@@ -94,23 +97,22 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Main Navbar */}
+
             <div className={styles.navbar}>
                 <div className={styles.navContent}>
-                    {/* Logo */}
+
                     <div className={styles.logo}>
                         <Link href="/">
-                            {/* Placeholder for Logo - replacing with text for now if image not available */}
                             <Image src={logo} alt="Logo" />
                         </Link>
                     </div>
 
-                    {/* Mobile Menu Toggle */}
+
                     <div className={styles.mobileToggle} onClick={toggleMobileMenu}>
                         {isMobileMenuOpen ? <X size={28} color="#000" /> : <Menu size={28} color="#000" />}
                     </div>
 
-                    {/* Navigation Items */}
+
                     <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.mobileNavOpen : ''}`}>
                         <ul className={styles.navLinks}>
                             {navItems.map((item) => (
@@ -122,15 +124,21 @@ const Header = () => {
                                         {item.label}
                                     </Link>
                                 </li>
-                            ))}
 
-                            <li
+                            ))}
+                            <li className={styles.mobileContact}>
+                                <Link href="/contact" className={styles.contactBtnNav}>
+                                    Contact Us
+                                </Link>
+                            </li>
+
+                            {/* <li
                                 className={styles.dropdownContainer}
                                 ref={dropdownRef}
                             >
                                 <button
-                                    className={`${styles.dropdownBtn} ${pathname.startsWith('/doctors') ? styles.active : ''}`}
-                                    onClick={toggleMenu}
+                                    // className={`${styles.dropdownBtn} ${pathname.startsWith('/doctors') ? styles.active : ''}`}
+                                    // onClick={toggleMenu}
                                 >
                                     Dr Schedule
                                 </button>
@@ -153,12 +161,13 @@ const Header = () => {
                                         </motion.ul>
                                     )}
                                 </AnimatePresence>
-                            </li>
-                            <li>
-                                <Link href={"/contact"} className={styles.contactBtnNav}>Contact Us</Link>
-                            </li>
+                            </li> */}
+
                         </ul>
                     </nav>
+                    <div className={styles.desktopOnlyContact}>
+                        <button> <Link href={"/contact"} className={styles.contactBtnNav}>Contact Us</Link></button>
+                    </div>
                 </div>
             </div>
         </header>

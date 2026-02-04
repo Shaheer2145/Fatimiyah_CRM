@@ -1,12 +1,12 @@
 import './globals.css'
-import { Outfit } from 'next/font/google';
 import { MockStoreProvider } from '@/context/MockStoreContext';
+import { Katibeh } from 'next/font/google';
 
 
-const outfit = Outfit({
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-main',
+const katibehFont = Katibeh({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata = {
@@ -16,8 +16,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={outfit.variable}>
-            <body className={outfit.className}>
+        <html lang="en">
+            <body className={katibehFont.className}>
                 <MockStoreProvider>
                     {children}
                 </MockStoreProvider>

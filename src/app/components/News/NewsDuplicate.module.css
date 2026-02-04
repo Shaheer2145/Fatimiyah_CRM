@@ -1,0 +1,335 @@
+.section {
+    padding: 50px 0;
+    background: white;
+}
+
+.container {
+    max-width: 1485px;
+    margin: 0 auto;
+    /* padding: 0 40px; */
+    height: auto;
+    width: 100%;
+
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Responsive width: replaced fixed 506px */
+    max-width: 506px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.subTitle {
+    color: #0080D2;
+
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    /* margin-bottom: 8px; */
+
+    padding: 5px 19.669px 5px 20px;
+    width: 124.83px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(353deg, rgba(30, 99, 255, 0.10) 0%, rgba(24, 124, 255, 0.10) 0%, rgba(18, 143, 255, 0.10) 0%, rgba(12, 169, 255, 0.10) 100%, rgba(6, 194, 255, 0.10) 100%, rgba(0, 219, 255, 0.10) 100%);
+}
+
+.title {
+    font-size: 80px;
+    font-weight: 400;
+    color: #000B47;
+    font-family: var(--font-katibeh), serif;
+    /* Responsive dimensions: replaced fixed 100px and 506px */
+    min-height: 80px;
+    max-width: 506px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.card {
+    background: white;
+    border-radius: 22px;
+    overflow: visible;
+    transition: all 0.4s;
+    /* Responsive dimensions: replaced fixed 452.55px and 630px */
+    max-width: 452.55px;
+    width: 100%;
+    height: auto;
+    min-height: 580px;
+    box-shadow: 20px 20px 25.047px 0 rgba(1, 1, 1, 0.05);
+    position: relative;
+    padding-bottom: 40px;
+    /* Space for the arrow */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); */
+}
+
+.imageWrapper {
+    height: 370px;
+    position: relative;
+    overflow: visible;
+    border-radius: 22px 22px 0 0;
+}
+
+.image {
+    width: 100%;
+    /* Changed from fixed 452px */
+    height: 100%;
+    /* Let it fill the wrapper */
+    object-fit: cover;
+    border-radius: 22px 22px 0 0;
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #1DA1F2;
+    color: white;
+    padding: 3.415px 22.328px 4.554px 22.77px;
+    border-radius: 6px;
+
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 113.85px;
+    background: linear-gradient(353deg, #1E63FF 0%, #187CFF 0%, #128FFF 0%, #0CA9FF 100%, #06C2FF 100%, #00DBFF 100%);
+
+}
+
+.content {
+    padding: 30px;
+    overflow: visible;
+    /* position: relative;
+     padding-bottom: 70px;  */
+}
+
+.meta {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #767676;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 15px;
+    font-weight: 400;
+}
+
+.cardTitle {
+    font-size: 56.295px;
+    font-weight: 400;
+    color: #000B47;
+    font-family: var(--font-katibeh), serif;
+    line-height: 56.925px;
+    margin-bottom: 20px;
+}
+
+.arrowBtn {
+    width: 72px;
+    height: 72px;
+    border-radius: 113.85px;
+    background: linear-gradient(358deg, #1E63FF 0%, #187CFF 0%, #128FFF 0%, #0CA9FF 100%, #06C2FF 100%, #00DBFF 100%);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: visible;
+}
+
+
+
+
+.arrowWrapper {
+    background-color: #fafafa;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -60px;
+    /* Slightly lower */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    left: 25%;
+    transform: translateX(-50%);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Responsive Breakpoints --- */
+
+/* RESPONSIVE: 1700px (Extra Large Desktop) */
+@media (max-width: 1700px) {
+    .container {
+        max-width: 1600px;
+        padding: 0 40px;
+    }
+}
+
+/* RESPONSIVE: 1600px (Large Desktop) */
+@media (max-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* RESPONSIVE: 1440px (Large Desktop) */
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .card {
+        min-height: 520px;
+    }
+
+    .imageWrapper {
+        height: 300px;
+    }
+
+    .title {
+        font-size: 64px;
+    }
+}
+
+/* RESPONSIVE: 1024px (Laptop/Large Tablet) */
+@media (max-width: 1024px) {
+    .section {
+        padding: 100px 0;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .card {
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .title {
+        font-size: 64px;
+    }
+}
+
+/* RESPONSIVE: 768px (Tablet) */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .container {
+        padding: 0 24px;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .title {
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+        gap: 70px;
+    }
+
+    .arrowWrapper {
+        left: 50%;
+    }
+
+    .meta {
+        font-size: 16px;
+    }
+}
+
+/* RESPONSIVE: 425px (Large Mobile) */
+@media (max-width: 425px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .cardTitle {
+        font-size: 24px;
+    }
+
+    .imageWrapper {
+        height: 250px;
+    }
+
+    .content {
+        padding: 24px;
+    }
+
+    .arrowWrapper {
+        width: 100px;
+        height: 100px;
+        bottom: -50px;
+    }
+
+    .arrowBtn {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* RESPONSIVE: 375px (Medium Mobile) */
+@media (max-width: 375px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .meta {
+        font-size: 12px;
+    }
+
+    .cardTitle {
+        font-size: 32px;
+    }
+}
+
+/* RESPONSIVE: 320px (Small Mobile) */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .subTitle {
+        font-size: 16px;
+        height: 34px;
+    }
+
+}

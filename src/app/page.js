@@ -8,19 +8,35 @@ import NewsRoom from './components/News/NewsRoom';
 import FAQ from './components/FAQ/FAQ';
 import Footer from './components/Footer/Footer';
 import styles from './page.module.css';
+import AboutDuplicate from './components/About/AboutDuplicate.js';
+import MedicalDepartmentsDuplicate from './components/Medical/MedicalDepartmentsDuplicate';
+import ServicesDuplicate from './components/Services/ServicesDuplicate';
+import HeroDuplicate from './components/Hero/HeroDuplicate';
+import NewsDuplicate from './components/News/NewsDuplicate';
+import HeaderDuplicate from "./components/Duplicate/HeaderDuplicate";
+import FooterDuplicate from './components/Footer/FooterDuplicate';
+
 
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <Header />
-      <Hero />
-      <AboutUs />
-      <MedicalDepartments />
-      <Services247 />
-      <NewsRoom />
-      <FAQ />
-      <Footer />
+      
+      {/* <Hero /> */}
+      <HeroDuplicate/>
+      
+      <AboutDuplicate/>
+      {/* <AboutUs /> */}
+      {/* <MedicalDepartments /> */}
+      <MedicalDepartmentsDuplicate/>
+      <ServicesDuplicate/>
+      {/* <Services247/> */}
+      {/* <NewsRoom /> */}
+      <NewsDuplicate/>
+      {/* <FAQ /> */}
+      {/* <Footer /> */}
+      <FooterDuplicate/>
     </main>
   );
 }
