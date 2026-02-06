@@ -5,17 +5,17 @@ import pyscho from "../../assets/psychatry.png";
 import eye from "../../assets/opthalmology.png";
 import heart from "../../assets/Cardiology.png";
 import shield from "../../assets/immunology.png";
-import flask from "../../assets/hemato.png";    
+import flask from "../../assets/hemato.png";
 import activity from "../../assets/gastro.png";
 import stethoscope from "../../assets/ortho.png";
 import microscope from "../../assets/pulmonary.png";
-import { MoveRight,icon } from 'lucide-react';
+import { MoveRight } from 'lucide-react';
 import styles from './MedicalDepartmentsDuplicate.module.css';
 import Image from 'next/image';
 
 const departments = [
     { name: 'Psychiatry', icon: pyscho, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
-    { name: 'Ophthalmology', icon:eye, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
+    { name: 'Ophthalmology', icon: eye, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
     { name: 'Cardiology', icon: heart, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
     { name: 'Immunology', icon: shield, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
     { name: 'Hematology', icon: flask, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },

@@ -12,7 +12,7 @@ export default function PatientDashboard() {
     const [isBookingOpen, setIsBookingOpen] = useState(false);
 
     // Filter appointments for this patient
-    const myAppointments = appointments.filter(apt => apt.patientId === user.id) || [];
+    const myAppointments = user ? appointments.filter(apt => apt.patientId === user.id) : [];
     const upcomingAppointments = myAppointments.filter(apt => apt.status !== 'completed');
 
     return (
@@ -20,7 +20,7 @@ export default function PatientDashboard() {
             {/* Welcoming Header */}
             <header className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-xl">
                 <div className="relative z-10 p-8 md:p-10">
-                    <h1 className="text-3xl font-bold tracking-tight">Good Morning, {user?.name?.split(' ')[0]}</h1>
+                    <h1 className="text-3xl font-bold tracking-tight">Good Morning, {user?.name?.split(' ')[0] || 'Patient'}</h1>
                     <p className="mt-2 text-blue-100 max-w-xl text-lg">
                         Manage your health journey, view appointments, and access medical records all in one place.
                     </p>
@@ -141,7 +141,8 @@ export default function PatientDashboard() {
                             </button>
                         </div>
                         <div className="p-6">
-                            <AppointmentForm onSuccess={() => setIsBookingOpen(false)} />
+                            {/* <AppointmentForm onSuccess={() => setIsBookingOpen(false)} /> */}
+                            <p className="text-center text-slate-500 py-4">Appointment form coming soon...</p>
                         </div>
                     </div>
                 </div>

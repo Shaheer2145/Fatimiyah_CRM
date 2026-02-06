@@ -22,7 +22,7 @@ const DoctorList = ({ doctors }) => {
     const [cindex, setCindex] = useState(0);
     useEffect(() => {
         const interval = setInterval(() => {
-            setCindex(prev => prev + 1) % placeholder.length;
+            setCindex(prev => (prev + 1) % placeholder.length);
         }, 3000);
     }, []);
 
@@ -57,7 +57,7 @@ const DoctorList = ({ doctors }) => {
                     animate={{ opacity: 1, y: 0 }}
                     className={styles.upper_section}
                 >
-                    <h1 className={styles.mainHeading}> {doctors.category}Doctors in Fatimiyah</h1>
+                    <h1 className={styles.mainHeading}>Doctors in Fatimiyah</h1>
                     <p className={styles.para}>Expert care across all specialties. Find and book your specialist today.</p>
                 </motion.div>
 

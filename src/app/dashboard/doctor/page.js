@@ -8,7 +8,7 @@ export default function DoctorDashboard() {
     const { appointments } = useMockStore();
 
     // Filter appointments for this doctor (Assuming doctor name matches for now)
-    const mySchedule = appointments.filter(apt => apt.doctorName === user.name) || [];
+    const mySchedule = user ? appointments.filter(apt => apt.doctorName === user.name) : [];
     const today = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
     return (
@@ -17,7 +17,7 @@ export default function DoctorDashboard() {
             <header className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-gray-100 pb-6">
                 <div>
                     <p className="text-emerald-600 font-medium text-sm mb-1 uppercase tracking-wide">Doctor's Portal</p>
-                    <h1 className="text-3xl font-bold text-gray-900">Good Morning, Dr. {user.name.split(' ')[1]}</h1>
+                    <h1 className="text-3xl font-bold text-gray-900">Good Morning, {user?.name ? `Dr. ${user.name.split(' ')[1]}` : 'Doctor'}</h1>
                     <p className="text-gray-500 mt-1">{today}</p>
                 </div>
                 <div className="flex gap-3">
