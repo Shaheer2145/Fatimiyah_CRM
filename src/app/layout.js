@@ -3,7 +3,7 @@ import { MockStoreProvider } from '@/context/MockStoreContext';
 import { Katibeh } from 'next/font/google';
 
 
-const katibehFont = Katibeh({
+const katibeh = Katibeh({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={katibehFont.className}>
+            <body className={katibeh.className}>
                 <MockStoreProvider>
                     {children}
                 </MockStoreProvider>

@@ -4,7 +4,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { useMockStore } from '@/context/MockStoreContext';
 import Link from 'next/link';
 import { Calendar, Clock, MapPin, User, ArrowRight, X, Activity, Droplet } from 'lucide-react';
-import AppointmentForm from '@/components/AppointmentForm';
+// import AppointmentForm from '@/components/AppointmentForm';
 
 export default function PatientDashboard() {
     const { user } = useAuth();
