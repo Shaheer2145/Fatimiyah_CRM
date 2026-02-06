@@ -9,8 +9,6 @@ import NewsDuplicate from './components/News/NewsDuplicate';
 
 import FooterDuplicate from './components/Footer/FooterDuplicate';
 
-
-
 export default function Home() {
   return (
     <main className={styles.main}>
