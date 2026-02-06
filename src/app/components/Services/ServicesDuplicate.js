@@ -56,7 +56,7 @@ const ServicesDuplicate = () => {
                             transition={{ delay: index * 0.2 }}
                             className={styles.card}
                         >
-                            <Image src={service.img} alt={service.title} className={styles.image} width={30} height={40} />
+                            <Image src={service.img} alt={service.title} className={styles.image} width={100} height={100} />
                             <div className={styles.overlay}>
                                 <h3 className={styles.cardTitle}>{service.title}</h3>
                                 <p className={styles.cardDesc}>{service.desc}</p>

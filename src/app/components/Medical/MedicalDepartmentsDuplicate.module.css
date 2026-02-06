@@ -193,7 +193,7 @@
 /* 2. 1440px Breakpoint */
 @media (max-width: 1440px) {
     .grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .container {
@@ -245,7 +245,7 @@
 }
 
 /* 4. 768px Breakpoint */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .section {
         padding: 60px 20px;
     }
@@ -271,17 +271,20 @@
         font-size: 13px;
         width: 100%;
     }
+    .grid {
+        grid-template-columns: 2fr !important;
+    }
 }
 
 /* 5. 480px Breakpoint */
-@media (max-width: 480px) {
+@media (max-width: 425px) {
     .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 
     .card {
         width: 100%;
-        max-width: 348px;
+        /* max-width: 348px; */
     }
 
     .title {

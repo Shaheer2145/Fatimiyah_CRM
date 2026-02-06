@@ -15,21 +15,21 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Header />
-      
+
       {/* <Hero /> */}
-      <HeroDuplicate/>
-      
-      <AboutDuplicate/>
+      <HeroDuplicate />
+
+      <AboutDuplicate />
       {/* <AboutUs /> */}
       {/* <MedicalDepartments /> */}
-      <MedicalDepartmentsDuplicate/>
-      <ServicesDuplicate/>
+      <MedicalDepartmentsDuplicate />
+      <ServicesDuplicate />
       {/* <Services247/> */}
       {/* <NewsRoom /> */}
-      <NewsDuplicate/>
+      <NewsDuplicate />
       {/* <FAQ /> */}
       {/* <Footer /> */}
-      <FooterDuplicate/>
+      <FooterDuplicate />
     </main>
   );
 }

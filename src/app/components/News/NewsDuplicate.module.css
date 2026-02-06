@@ -161,11 +161,11 @@
 
 .arrowWrapper {
     background-color: #fafafa;
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     position: absolute;
-    bottom: -60px;
+    bottom: -50px;
     /* Slightly lower */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     left: 25%;
@@ -190,6 +190,7 @@
 @media (max-width: 1600px) {
     .container {
         max-width: 1400px;
+        padding: 0 40px;
     }
 }
 
@@ -197,6 +198,7 @@
 @media (max-width: 1440px) {
     .container {
         max-width: 1200px;
+        /* padding: 0; */
     }
 
     .card {
@@ -220,7 +222,7 @@
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
+        gap: 80px;
     }
 
     .card {
@@ -256,7 +258,7 @@
         grid-template-columns: 1fr;
         max-width: 500px;
         margin: 0 auto;
-        gap: 70px;
+        gap: 90px;
     }
 
     .arrowWrapper {

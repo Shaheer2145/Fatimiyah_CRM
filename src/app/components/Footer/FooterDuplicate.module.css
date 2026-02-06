@@ -146,6 +146,8 @@
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     margin-bottom: 80px;
     gap: 40px;
+    max-width: 1484px;
+    padding: 0 20px;
 }
 
 .logoArea {
@@ -296,6 +298,10 @@
         right: 30%;
         width: 180px;
         height: 180px;
+    }
+    .footerGrid {
+        grid-template-columns: 1fr .5fr .5fr .5fr;
+        padding: 0 25px;
     }
 }
 

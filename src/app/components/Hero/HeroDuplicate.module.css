@@ -204,6 +204,7 @@
     width: 100%;
     border-radius: 15px;
     border: 1px solid #DDD;
+    font-family: 'Poppins',sans-serif;
 }
 
 .input::placeholder {
@@ -285,9 +286,9 @@
     }
 
     .formContainer {
-        width: 1200px;
+        width: 1100px;
         padding: 40px;
-        bottom: -70px;
+        bottom: -90px;
     }
 
     .formGroup {
@@ -330,11 +331,11 @@
     }
 
     .formContainer {
-        width: 95%;
+        width: 90%;
         height: auto;
-        padding: 30px;
+        /* padding: 30px; */
         flex-wrap: wrap;
-        bottom: -65%
+        bottom: -60%
     }
 
     .searchBar {
@@ -343,6 +344,7 @@
         justify-content: center;
         width: 100%;
         max-width: none;
+        padding: 0;
     }
 
     .formGroup {
@@ -400,7 +402,7 @@
 
     .formContainer {
         position: relative;
-        bottom: 80px;
+        bottom: 110px;
         left: auto;
         transform: none;
         margin: 40px auto 0 auto;
@@ -426,16 +428,19 @@
     }
 
     .label {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .select,
-    .input {
-        font-size: 16px;
+    .input,.input::placeholder {
+        font-size: 12px;
+    }
+    .searchBtn{
+        font-size: 12px;
     }
 }
 
-/* RESPONSIVE: 425px (Large Mobile) */
+
 @media (max-width: 425px) {
     .title {
         font-size: 36px;
@@ -449,10 +454,33 @@
 
     .formContainer {
         padding: 25px 15px;
+        bottom: 70px !important;
     }
 
     .searchBtn {
         width: 100%;
+    }
+
+    .primaryBtn {
+        font-size: 18px;
+    }
+    .input{
+        height: 30px !important;
+        padding: 10px 12px;
+    }
+    .select{
+        padding: 10px 8px;
+        height: 40px;
+        font-size: 12px;
+
+    }
+    .label{
+        font-size: 12px;
+    }
+
+    .input::placeholder {
+        font-size: 12px !important;
+        
     }
 }
 
@@ -473,6 +501,10 @@
 
     .searchBar {
         gap: 12px;
+    }
+
+    .primaryBtn {
+        font-size: 15px !important;
     }
 }
 
@@ -495,7 +527,10 @@
 
     .formContainer {
         padding: 15px 10px;
+        bottom: 70px !important;
     }
+
+    .searchBar {}
 
     .searchBtn {
         font-size: 18px;

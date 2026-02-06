@@ -170,6 +170,12 @@
     .container {
         max-width: 1400px;
     }
+    .title {
+        font-size: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
 
 /* 2. 1440px Breakpoint */
@@ -184,6 +190,12 @@
 
     .card {
         height: 550px;
+    }
+    .title {
+        font-size: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     /* .headerBox {
@@ -209,6 +221,9 @@
 
     .title {
         font-size: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
 
 
@@ -256,6 +271,7 @@
         max-width: 500px;
         /* Let cards be slightly wider in single column */
     }
+    
 }
 
 /* 5. 425px Breakpoint */
@@ -273,6 +289,19 @@
         max-width: 300px;
         font-size: 16px;
     }
+    .overlay {
+        padding: 16px;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        height: 40%;
+    }
+    .cardTitle{
+        font-size: 20px;
+    }
+    .cardDesc{
+        font-size: 14px;
+    }
 }
 
 /* 6. 375px Breakpoint */
@@ -286,17 +315,10 @@
         font-size: 28px;
     }
 
-    .card {
-        height: 400px;
-    }
+    
 
-    .cardTitle {
-        font-size: 22px;
-    }
-
-    .cardDesc {
-        font-size: 14px;
-    }
+    
+    
 }
 
 /* 7. 320px Breakpoint */
@@ -311,7 +333,7 @@
     }
 
     .header {
-        border: 2px solid red;
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -329,5 +351,12 @@
         bottom: 15px;
         left: 15px;
         right: 15px;
+        height: 40%;
+    }
+    .cardTitle{
+        font-size: 18px;
+    }
+    .cardDesc{
+        font-size: 12px;
     }
 }

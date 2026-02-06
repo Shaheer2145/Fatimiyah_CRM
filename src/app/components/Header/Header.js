@@ -86,10 +86,10 @@ const Header = () => {
                         ) : (
                             <>
                                 <Image src={Login} alt='login' />
-                                <Link href="/login">Login</Link>
+                                <Link className={styles.login} href="/login">Login</Link>
 
                                 <Image src={signup} alt='login' />
-                                <Link href="/register">Register</Link>
+                                <Link className={styles.login} href="/register">Register</Link>
                             </>
                         )}
                         <Link href="/donate" className={styles.donateBtn}>Donate</Link>

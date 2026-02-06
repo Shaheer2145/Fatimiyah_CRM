@@ -564,6 +564,11 @@
         height: 280px;
         top: -20px;
     }
+    .btn{
+        font-size: 16px;
+        height: 50px;
+        width: 140px;
+    }
 }
 
 /* RESPONSIVE: 425px (Large Mobile) */
@@ -652,6 +657,11 @@
         height: 200px;
         top: 0;
         left: 10px;
+    }
+    .btn{
+        font-size: 12px;
+        height: 50px;
+        width: 120px;
     }
 }
 
