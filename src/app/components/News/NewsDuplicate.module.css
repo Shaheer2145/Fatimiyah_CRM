@@ -72,7 +72,7 @@
     width: 100%;
     height: auto;
     min-height: 580px;
-    box-shadow: 20px 20px 25.047px 0 rgba(1, 1, 1, 0.05);
+    box-shadow: 2px 20px 25.047px 0 rgba(1, 1, 1, 0.05);
     position: relative;
     padding-bottom: 40px;
     /* Space for the arrow */
@@ -147,7 +147,7 @@
     border-radius: 113.85px;
     background: linear-gradient(358deg, #1E63FF 0%, #187CFF 0%, #128FFF 0%, #0CA9FF 100%, #06C2FF 100%, #00DBFF 100%);
     color: white;
-
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,18 +179,13 @@
 /* --- Responsive Breakpoints --- */
 
 /* RESPONSIVE: 1700px (Extra Large Desktop) */
-@media (max-width: 1700px) {
-    .container {
-        max-width: 1600px;
-        padding: 0 40px;
-    }
-}
+
 
 /* RESPONSIVE: 1600px (Large Desktop) */
 @media (max-width: 1600px) {
     .container {
         max-width: 1400px;
-        padding: 0 40px;
+        /* padding: 0 40px; */
     }
 }
 
@@ -216,13 +211,17 @@
 
 /* RESPONSIVE: 1024px (Laptop/Large Tablet) */
 @media (max-width: 1024px) {
+    .container{
+        padding: 0 40px;
+    }
     .section {
         padding: 100px 0;
     }
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 80px;
+        gap: 70px;
+        padding: 0 10px;
     }
 
     .card {

@@ -79,6 +79,7 @@
 }
 
 .primaryBtn {
+    outline: none;
     border-radius: 40.294px;
     background: #0070B9;
     color: white;
@@ -90,6 +91,7 @@
     justify-content: center;
     gap: 12px;
     font-size: 20.147px;
+    border: none;
     /* width: 305.91px; */
     height: 60.552px;
     font-family: 'Poppins', sans-serif;
