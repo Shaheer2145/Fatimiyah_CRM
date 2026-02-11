@@ -1,12 +1,8 @@
 .header {
     width: 100%;
-
     background: #fff;
-
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: relative;
+    z-index: 10;
 }
 
 /* Top Bar */
@@ -14,11 +10,12 @@
     width: 100%;
     padding: 8px 40px;
     font-size: 14px;
-    height: 100%;
     background-color: #fff;
+    /* Ensure visibility when sticky */
     max-width: 1920px;
     margin: 0 auto;
-    height: 69px;
+    /* height: 69px; */
+    position: relative;
 }
 
 .topBarContent {
@@ -37,17 +34,19 @@
     color: #666;
     font-weight: 500;
 }
-.login{
+
+.login {
     /* border: 2px solid red; */
     font-size: 16px;
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
 }
 
 .donateBtn {
-
+    height: 33px;
+    width: 102px;
     border-radius: 6px;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #09B200;
     color: #fff;
     padding: 6px 20px;
@@ -55,6 +54,9 @@
     font-size: 16px;
     font-weight: 500;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: background-color 0.3s ease;
 }
 
@@ -64,16 +66,17 @@
 
 /* Navbar */
 .navbar {
-
-    position: relative;
+    position: sticky;
     display: flex;
     justify-content: center;
     align-items: center;
     /* border-bottom: 1px solid #eee; */
-    padding: 32px 64px 30px 64px;
+    padding: 0px 64px 0px 64px;
     background-color: #EBF7FF;
-
+    height: 131px;
+    max-width: 1920px;
 }
+
 
 .navContent {
     display: flex;
@@ -96,6 +99,8 @@
     display: none;
     cursor: pointer;
     z-index: 1100;
+    border: none;
+    outline: none;
 }
 
 .nav {
@@ -147,7 +152,9 @@
     font-weight: 700;
     font-size: 16px;
     gap: 10px;
-    font-family: 'Poppins',sans-serif;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
     transition: background-color 0.3s ease;
 }
 
@@ -201,12 +208,13 @@
 /* RESPONSIVE: 1700px (Extra Large Desktop) */
 @media (max-width: 1600px) {
 
-    
+
     .navContent {
         padding: 0 40px;
         max-width: 1520px;
     }
-    .topBarContent{
+
+    .topBarContent {
         padding: 10px 60px;
     }
 
@@ -216,6 +224,8 @@
 
     .desktopOnlyContact {
         display: block;
+        border: none;
+        outline: none;
     }
 }
 
@@ -240,13 +250,14 @@
 /* RESPONSIVE: 1024px (Laptop/Large Tablet) */
 @media (max-width: 1024px) {
 
-    .topBarContent{
+    .topBarContent {
         padding: 0 24px;
     }
-    .navContent{
+
+    .navContent {
         padding: 0;
     }
-    
+
     .navLinks {
         gap: 20px;
     }
@@ -368,13 +379,16 @@
     .mobileNavOpen .navLinks {
         gap: 20px;
     }
-    .login{
+
+    .login {
         font-size: 12px;
     }
-    .topLinks{
+
+    .topLinks {
         padding: 0 30px;
     }
-    .donateBtn{
+
+    .donateBtn {
         font-size: 12px;
     }
 }
@@ -411,7 +425,8 @@
     .mobileNavOpen .navLinks {
         gap: 16px;
     }
-    .topBarContent{
+
+    .topBarContent {
         padding: 0;
     }
 }

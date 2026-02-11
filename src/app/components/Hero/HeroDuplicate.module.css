@@ -18,7 +18,6 @@
     padding: 0 40px;
     position: relative;
     z-index: 10;
-
 }
 
 .contentRow {
@@ -30,12 +29,12 @@
 }
 
 .textContent {
-    /* flex: 1;  */
+
 
     padding: 9.85px 0 8.97px 35.181px;
     height: 495.112px;
     width: 775px;
-    margin-bottom: 10%;
+    /* margin-bottom: 10%; */
 }
 
 .badge {
@@ -44,7 +43,6 @@
     font-weight: 400;
     font-size: 20.147px;
     line-height: 24.176px;
-    margin-bottom: 24px;
     display: flex;
     width: 238.631px;
     height: 34.25px;
@@ -81,7 +79,7 @@
 .primaryBtn {
     outline: none;
     border-radius: 40.294px;
-    background: #0070B9;
+    background: linear-gradient(357deg, #1e63ff 0%, #187cff 0%, #128fff 0%, #0ca9ff 100%, #06c2ff 100%, #00dbff 100%);
     color: white;
     padding: 16px 0px 16px 20px;
     font-weight: 500;
@@ -148,7 +146,7 @@
 .formContainer {
 
     width: 1490px;
-    height: 191px;
+    height: 197px;
 
     background: #ffffff;
     border-radius: 40px;
@@ -160,7 +158,7 @@
     align-items: center;
 
     position: absolute;
-    bottom: 1px;
+    bottom: -10%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -174,7 +172,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 43px;
     width: 100%;
     max-width: 1370px;
     position: absolute;
@@ -206,7 +204,7 @@
     width: 100%;
     border-radius: 15px;
     border: 1px solid #DDD;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .input::placeholder {
@@ -217,7 +215,6 @@
 
 
 .searchBtn {
-
     color: white;
     padding: 12px 19px 10px 18px;
     border-radius: 15px;
@@ -226,53 +223,114 @@
     font-size: 20px;
     border: none;
     cursor: pointer;
-    text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
-/* RESPONSIVE: 1700px (Extra Large Desktop) */
 @media (max-width: 1600px) {
     .hero {
-        padding: 0 64px;
+        padding: 0 80px;
+        height: auto;
+        min-height: 1000px;
     }
 
     .container {
-        max-width: 1440px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 0 40px;
+        padding: 0;
+    }
+
+    .contentRow {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .formContainer {
+        width: 1150px;
+        bottom: -12%;
+        height: 161px;
+    }
+
+    .textContent {
+        width: 50%;
+        padding-left: 0px;
+        height: auto;
 
     }
 
+    .title {
+        font-size: 72px;
+        line-height: 84px;
+        width: auto;
+        height: auto;
+        margin-bottom: 20px;
+    }
 
+    .description {
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 30px;
+    }
 
-    .formContainer {
-        width: 1400px;
-        bottom: -20px;
+    .heroImage {
+        width: 100%;
+        max-width: 550px;
+        height: auto;
     }
 
     .searchBar {
         padding: 20px 40px;
+    }
+
+    .label,
+    .input::placeholder,
+    .select {
+        font-size: 16px;
+    }
+
+    .primaryBtn {
+        font-size: 16px;
+        height: 50px;
+    }
+
+    .arrowBox {
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+
+    }
+
+    .arrowBox svg {
+        width: 20px;
+        height: 20px;
     }
 }
 
 /* RESPONSIVE: 1440px (Large Desktop) */
 @media (max-width: 1440px) {
     .hero {
-        padding: 0 40px;
+        padding: 0 60px;
         height: auto;
         min-height: 900px;
     }
 
     .container {
-        max-width: 1300px;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .contentRow {
+        width: 100%;
+        margin: 0 auto;
     }
 
     .textContent {
-        width: 600px;
+        width: 50%;
     }
 
     .title {
@@ -283,14 +341,16 @@
     }
 
     .heroImage {
-        width: 550px;
+        width: 100%;
+        max-width: 500px;
         height: auto;
     }
 
     .formContainer {
-        width: 1100px;
-        padding: 40px;
-        bottom: -90px;
+        width: 100%;
+        padding: 0px;
+        height: 161px;
+        bottom: -15%;
     }
 
     .formGroup {
@@ -300,22 +360,34 @@
     .searchBar {
         padding: 20px 40px;
     }
+
+    .label,
+    .input::placeholder,
+    .select {
+        font-size: 14px;
+    }
 }
 
 /* RESPONSIVE: 1024px (Laptop/Large Tablet) */
 @media (max-width: 1024px) {
     .hero {
-        padding: 0 20px;
+        padding: 0 40px;
         min-height: 800px;
         margin-bottom: 30%;
     }
 
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
     .contentRow {
+        width: 100%;
         gap: 40px;
     }
 
     .textContent {
-        width: 500px;
+        width: 50%;
     }
 
     .title {
@@ -329,15 +401,16 @@
     }
 
     .heroImage {
-        width: 450px;
+        width: 100%;
+        max-width: 400px;
     }
 
     .formContainer {
-        width: 90%;
+        width: 100%;
         height: auto;
         /* padding: 30px; */
-        flex-wrap: wrap;
-        bottom: -60%
+        /* flex-wrap: wrap; */
+        bottom: -70%
     }
 
     .searchBar {
@@ -346,12 +419,16 @@
         justify-content: center;
         width: 100%;
         max-width: none;
-        padding: 0;
+        padding: 20px;
     }
 
     .formGroup {
         width: 45%;
         flex: none;
+    }
+
+    .searchBtn {
+        font-size: 16px;
     }
 }
 
@@ -434,10 +511,12 @@
     }
 
     .select,
-    .input,.input::placeholder {
+    .input,
+    .input::placeholder {
         font-size: 12px;
     }
-    .searchBtn{
+
+    .searchBtn {
         font-size: 12px;
     }
 }
@@ -466,23 +545,26 @@
     .primaryBtn {
         font-size: 18px;
     }
-    .input{
+
+    .input {
         height: 30px !important;
         padding: 10px 12px;
     }
-    .select{
+
+    .select {
         padding: 10px 8px;
         height: 40px;
         font-size: 12px;
 
     }
-    .label{
+
+    .label {
         font-size: 12px;
     }
 
     .input::placeholder {
         font-size: 12px !important;
-        
+
     }
 }
 
@@ -531,8 +613,6 @@
         padding: 15px 10px;
         bottom: 70px !important;
     }
-
-    .searchBar {}
 
     .searchBtn {
         font-size: 18px;

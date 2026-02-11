@@ -15,13 +15,13 @@ import Image from 'next/image';
 
 const departments = [
     { name: 'Psychiatry', icon: pyscho, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
-    { name: 'Ophthalmology', icon: eye, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
-    { name: 'Cardiology', icon: heart, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
-    { name: 'Immunology', icon: shield, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
+    { name: 'Ophthalmology', icon: eye, desc: 'Our areas of expertise make the department a national cardiac referral centre...' },
+    { name: 'Cardiology', icon: heart, desc: 'Our areas of expertise make the department a national cardiac referral centre...' },
+    { name: 'Immunology', icon: shield, desc: 'The immune system provides the defense for an organism to repel invasion..' },
     { name: 'Hematology', icon: flask, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
-    { name: 'Gastroenterology', icon: activity, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
-    { name: 'Orthopedics', icon: stethoscope, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
-    { name: 'Pulmonary', icon: microscope, desc: 'We have more doctor for your dental illness. We are here for your better treatment' },
+    { name: 'Gastroenterology', icon: activity, desc: 'Our areas of expertise make the department a national cardiac referral centre...' },
+    { name: 'Orthopedics', icon: stethoscope, desc: 'We have a diverse team of clinicians, administrators, and researchers...' },
+    { name: 'Pulmonary', icon: microscope, desc: 'Medical is one of the leading medical facilities in America for the diagnosis...' },
 ];
 
 const MedicalDepartmentsDuplicate = () => {
@@ -44,7 +44,7 @@ const MedicalDepartmentsDuplicate = () => {
                             className={styles.card}
                         >
                             <div className={styles.iconWrapper}>
-                                <Image src={dept.icon} alt={dept.name} width={60} height={60} />
+                                <Image src={dept.icon} alt={dept.name} width={56} height={56} />
                             </div>
                             <h3 className={styles.cardTitle}>{dept.name}</h3>
                             <p className={styles.cardDesc}>{dept.desc}</p>

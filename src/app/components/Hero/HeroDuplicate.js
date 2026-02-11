@@ -68,7 +68,7 @@ const HeroDuplicate = () => {
                         </div>
 
                         <div className={styles.formGroup}>
-                            <label className={styles.label}>Find doctor</label>
+                            <label className={styles.label}>Your Email</label>
                             <input type="text" placeholder="Email" className={styles.input} />
                         </div>
 

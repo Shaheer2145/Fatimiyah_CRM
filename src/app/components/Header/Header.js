@@ -166,7 +166,7 @@ const Header = () => {
                         </ul>
                     </nav>
                     <div className={styles.desktopOnlyContact}>
-                        <button> <Link href={"/contact"} className={styles.contactBtnNav}>Contact Us</Link></button>
+                        <Link href={"/contact"} className={styles.contactBtnNav}>Contact Us</Link>
                     </div>
                 </div>
             </div>

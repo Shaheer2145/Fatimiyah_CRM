@@ -6,7 +6,7 @@
     width: 100%;
     position: relative;
     margin-top: 400px;
-    background: url("../../assets/footerbg.png") lightgray center / cover no-repeat;
+    background: url("../../assets/footerbg.png") rgb(240, 240, 243) center / cover no-repeat;
 }
 
 .container {
@@ -259,7 +259,7 @@
 
 @media (max-width: 1600px) {
     .ctaBanner {
-        max-width: 1400px;
+        max-width: 1200px;
         padding: 20px 60px;
         height: 320px;
     }
@@ -273,11 +273,37 @@
         width: 180px;
         height: 180px;
     }
+
+    .container {
+        max-width: 1200px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .colTitle {
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+
+    .footerGrid {
+        gap: 30px;
+    }
 }
 
 @media (max-width: 1440px) {
     .ctaBanner {
-        max-width: 1200px;
+        max-width: 1000px;
         height: 300px;
         padding: 20px 50px;
         top: -180px;
@@ -299,9 +325,32 @@
         width: 180px;
         height: 180px;
     }
+
     .footerGrid {
         grid-template-columns: 1fr .5fr .5fr .5fr;
         padding: 0 25px;
+        gap: 20px;
+    }
+
+    .container {
+        max-width: 1100px;
+    }
+
+    .logo {
+        width: 160px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .colTitle {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .link {
+        font-size: 15px;
     }
 }
 
@@ -312,7 +361,7 @@
     }
 
     .ctaBanner {
-        max-width: 90%;
+        max-width: 900px;
         height: 250px;
         top: -150px;
         padding: 30px 40px;
@@ -336,6 +385,21 @@
 
     .footerGrid {
         grid-template-columns: 1.2fr 1fr;
+        gap: 30px;
+    }
+
+    .container {
+        max-width: 900px;
+    }
+
+    .colTitle {
+        font-size: 30px;
+    }
+
+    .description,
+    .link,
+    .contactItem p {
+        font-size: 14px;
     }
 }
 

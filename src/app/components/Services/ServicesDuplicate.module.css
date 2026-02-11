@@ -89,7 +89,7 @@
     border-radius: 40px;
     border: none;
     gap: 20px;
-    background: #0070B9;
+    background: linear-gradient(357deg, #1e63ff 0%, #187cff 0%, #128fff 0%, #0ca9ff 100%, #06c2ff 100%, #00dbff 100%);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -98,7 +98,7 @@
     height: 50px;
     border-radius: 50%;
     border: 1px solid #FFF;
-    outline: none   ;
+    outline: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,20 +169,42 @@
 /* 1. 1600px Breakpoint */
 @media (max-width: 1600px) {
     .container {
-        max-width: 1400px;
+        max-width: 1260px;
+        padding: 0 3%;
     }
+
     .title {
-        font-size: 80px;
+        font-size: 64px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .btnAll {
+        width: 220px;
+        height: 54px;
+        font-size: 18px;
+    }
+
+    .card {
+        height: 550px;
+    }
+
+    .cardTitle {
+        font-size: 22px;
+    }
+
+    .headerBox {
+        margin-bottom: 30px;
     }
 }
 
 /* 2. 1440px Breakpoint */
 @media (max-width: 1440px) {
     .container {
-        max-width: 1200px;
+        max-width: 1100px;
     }
 
     .grid {
@@ -192,6 +214,7 @@
     .card {
         height: 550px;
     }
+
     .title {
         font-size: 60px;
         display: flex;
@@ -213,11 +236,13 @@
 /* 3. 1024px Breakpoint */
 @media (max-width: 1024px) {
     .container {
-        max-width: 960px;
+        max-width: 900px;
+        padding: 0 40px;
     }
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
     }
 
     .title {
@@ -227,7 +252,9 @@
         align-items: center;
     }
 
-
+    .headerBox {
+        margin-bottom: 10px;
+    }
 }
 
 /* 4. 768px Breakpoint */
@@ -272,7 +299,7 @@
         max-width: 500px;
         /* Let cards be slightly wider in single column */
     }
-    
+
 }
 
 /* 5. 425px Breakpoint */
@@ -290,6 +317,7 @@
         max-width: 300px;
         font-size: 16px;
     }
+
     .overlay {
         padding: 16px;
         bottom: 15px;
@@ -297,10 +325,12 @@
         right: 15px;
         height: 40%;
     }
-    .cardTitle{
+
+    .cardTitle {
         font-size: 20px;
     }
-    .cardDesc{
+
+    .cardDesc {
         font-size: 14px;
     }
 }
@@ -316,10 +346,10 @@
         font-size: 28px;
     }
 
-    
 
-    
-    
+
+
+
 }
 
 /* 7. 320px Breakpoint */
@@ -334,7 +364,7 @@
     }
 
     .header {
-        
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -354,10 +384,12 @@
         right: 15px;
         height: 40%;
     }
-    .cardTitle{
+
+    .cardTitle {
         font-size: 18px;
     }
-    .cardDesc{
+
+    .cardDesc {
         font-size: 12px;
     }
 }

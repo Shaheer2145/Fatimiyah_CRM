@@ -176,62 +176,110 @@
     justify-content: center;
 }
 
-/* --- Responsive Breakpoints --- */
-
-/* RESPONSIVE: 1700px (Extra Large Desktop) */
 
 
 /* RESPONSIVE: 1600px (Large Desktop) */
 @media (max-width: 1600px) {
     .container {
-        max-width: 1400px;
-        /* padding: 0 40px; */
+        max-width: 1260px;
+        padding: 0 3%;
+    }
+
+    .title {
+        font-size: 64px;
+    }
+
+    .card {
+        height: 500px;
+
+    }
+
+    .cardTitle {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .imageWrapper {
+        height: 280px;
+    }
+
+    .arrowWrapper {
+        width: 80px;
+        height: 80px;
+        bottom: -40px;
+    }
+
+    .arrowBtn {
+        width: 58px;
+        height: 58px;
+    }
+
+    .arrowBtn img {
+        width: 24px;
+        height: 24px;
     }
 }
 
 /* RESPONSIVE: 1440px (Large Desktop) */
 @media (max-width: 1440px) {
     .container {
-        max-width: 1200px;
-        /* padding: 0; */
+        max-width: 1100px;
     }
 
     .card {
-        min-height: 520px;
+        height: 480px;
     }
 
     .imageWrapper {
-        height: 300px;
+        height: 280px;
     }
 
     .title {
-        font-size: 64px;
+        font-size: 48px;
+    }
+
+    .cardTitle {
+        font-size: 42px;
+        line-height: 42px;
+    }
+
+    .meta {
+        font-size: 16px;
     }
 }
 
 /* RESPONSIVE: 1024px (Laptop/Large Tablet) */
 @media (max-width: 1024px) {
-    .container{
+    .container {
+        max-width: 900px;
         padding: 0 40px;
     }
+
     .section {
-        padding: 100px 0;
+        padding: 80px 0;
     }
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 70px;
-        padding: 0 10px;
+        gap: 60px;
+        padding: 0;
     }
 
     .card {
         max-width: 100%;
-        min-height: auto;
+        height: 400px;
     }
 
     .title {
-        font-size: 64px;
+        font-size: 48px;
     }
+
+    .cardTitle {
+        font-size: 38px;
+        line-height: 38px;
+    }
+
+
 }
 
 /* RESPONSIVE: 768px (Tablet) */
