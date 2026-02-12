@@ -70,8 +70,7 @@
     /* Responsive dimensions: replaced fixed 452.55px and 630px */
     max-width: 452.55px;
     width: 100%;
-    height: auto;
-    min-height: 580px;
+    height: 580px;
     box-shadow: 2px 20px 25.047px 0 rgba(1, 1, 1, 0.05);
     position: relative;
     padding-bottom: 40px;
@@ -126,7 +125,7 @@
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     color: #767676;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     display: flex;
     gap: 15px;
     font-weight: 400;
@@ -195,8 +194,9 @@
     }
 
     .cardTitle {
-        font-size: 48px;
+        font-size: 42px;
         line-height: 48px;
+
     }
 
     .imageWrapper {
@@ -227,7 +227,7 @@
     }
 
     .card {
-        height: 480px;
+        height: 500px;
     }
 
     .imageWrapper {
@@ -235,7 +235,7 @@
     }
 
     .title {
-        font-size: 48px;
+        font-size: 42px;
     }
 
     .cardTitle {

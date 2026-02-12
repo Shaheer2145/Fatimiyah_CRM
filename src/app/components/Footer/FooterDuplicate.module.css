@@ -1,6 +1,6 @@
 .footer {
     background: white;
-    padding: 240px 0 30px;
+    padding: 200px 0 30px;
     border-top: 1px solid #f1f5f9;
     height: auto;
     width: 100%;
@@ -13,7 +13,7 @@
     max-width: 1489px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 40px;
+
 }
 
 .ctaBanner {
@@ -93,9 +93,9 @@
 }
 
 .ctaText h2 {
-    font-size: 72px;
+    font-size: 100px;
     margin: 0;
-    font-weight: 600;
+    font-weight: 400;
     color: white;
     line-height: 1;
 }
@@ -144,7 +144,7 @@
 .footerGrid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     gap: 40px;
     max-width: 1484px;
     padding: 0 20px;
@@ -163,9 +163,11 @@
 
 .description {
     font-size: 17px;
+    font-weight: 400;
     color: #767676;
     line-height: 1.6;
     max-width: 100%;
+    font-family: "Poppins", sans-serif;
 }
 
 .socials {
@@ -203,7 +205,11 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 05px;
+}
+
+.listBox:nth-of-type(2) .linkList {
+    gap: 10px;
 }
 
 .link {
@@ -237,9 +243,10 @@
 }
 
 .contactItem p {
-    font-size: 16px;
+    font-size: 18px;
     color: #64748b;
     margin: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 .copyBar {
@@ -265,13 +272,13 @@
     }
 
     .ctaText h2 {
-        font-size: 64px;
+        font-size: 72px;
     }
 
     .icon247 {
-        right: 35%;
-        width: 180px;
-        height: 180px;
+        right: 32%;
+        width: 140px;
+        height: 140px;
     }
 
     .container {
@@ -288,16 +295,47 @@
     }
 
     .colTitle {
-        font-size: 38px;
+        font-size: 40px;
         margin-bottom: 20px;
     }
 
     .link {
-        font-size: 16px;
+        font-size: 14px;
     }
+
 
     .footerGrid {
         gap: 30px;
+    }
+
+    .linkList {
+        gap: 5px !important;
+    }
+
+    .listBox:nth-of-type(3) .linkList {
+        gap: 0px !important;
+    }
+
+    .socials {
+        gap: 10px;
+    }
+
+    .socialLink {
+        width: 36px;
+        height: 36px;
+    }
+
+    .socialLink svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .logoArea {
+        gap: 20px;
+    }
+
+    .contactItem p {
+        font-size: 14px;
     }
 }
 
@@ -310,7 +348,7 @@
     }
 
     .ctaText h2 {
-        font-size: 56px;
+        font-size: 64px;
     }
 
     .doctorImageWrapper {
@@ -322,8 +360,8 @@
 
     .icon247 {
         right: 30%;
-        width: 180px;
-        height: 180px;
+        width: 140px;
+        height: 140px;
     }
 
     .footerGrid {
@@ -345,12 +383,38 @@
     }
 
     .colTitle {
-        font-size: 32px;
+        font-size: 36px;
         margin-bottom: 15px;
     }
 
     .link {
+        font-size: 14px;
+    }
+
+    .description {
         font-size: 15px;
+    }
+
+    .contactItem p {
+        font-size: 14px;
+    }
+
+    .socials {
+        gap: 8px;
+    }
+
+    .socialLink {
+        width: 32px;
+        height: 32px;
+    }
+
+    .socialLink svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .contactItem p {
+        font-size: 14px;
     }
 }
 
