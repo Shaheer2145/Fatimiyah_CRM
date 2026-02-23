@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react';
-import styles from "@/app/components/ContactUS/Contact.module.css";
+import styles from "../ContactUS/Contact.module.css";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 function ContactUs() {

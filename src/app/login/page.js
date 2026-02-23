@@ -7,7 +7,7 @@ import styles from '../styles/auth.module.css';
 
 export default function LoginPage() {
     const router = useRouter();
-    const { login } = useAuth();
+    
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');

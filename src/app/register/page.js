@@ -7,7 +7,7 @@ import styles from '../styles/auth.module.css';
 
 export default function RegisterPage() {
     const router = useRouter();
-    const { register } = useAuth();
+    
 
     const [formData, setFormData] = useState({
         name: '',

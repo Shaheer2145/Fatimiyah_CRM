@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 
 import { FileText } from 'lucide-react';
 
-// import { ScheduleModal } from '@/app/components/DoctorList/DoctorModals';
+// import { ScheduleModal } from '../../app/components/DoctorList/DoctorModals';
 // Animation Variants
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -37,7 +37,7 @@ const DepartmentPage = () => {
     const params = useParams();
     const { slug } = params;
 
-    const department = departments[slug];
+    // const department = departments[slug];
 
     if (!department) {
         return (

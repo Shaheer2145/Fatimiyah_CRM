@@ -1,15 +1,15 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import fbLogo from "@/assets/FacebookLogo.svg";
-import ytLogo from "@/assets/YoutubeLogo.svg";
-import instaLogo from "@/assets/InstagramLogo.svg";
-import linkedinLogo from "@/assets/LinkedinLogo.svg";
-import map from "@/assets/MAp.png";
+import fbLogo from "../../assets/FacebookLogo.svg";
+import ytLogo from "../../assets/YoutubeLogo.svg";
+import instaLogo from "../../assets/InstagramLogo.svg";
+import linkedinLogo from "../../assets/LinkedinLogo.svg";
+import map from "../../assets/MAp.png";
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Footer.module.css';
 import Image from 'next/image';
-import logo from "@/assets/FatmiyahFooterLogo.png";
+import logo from "../../assets/FatmiyahFooterLogo.png";
 
 const Footer = () => {
     const [showScrollTop, setShowScrollTop] = useState(false);
