@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import styles from './FooterDuplicate.module.css';
 import logo from "../../assets/fatmiyahLogo.png";
 import footerdoc from "../../assets/footerdoc.png";
@@ -80,10 +79,10 @@ const FooterDuplicate = () => {
                         <h3 className={styles.colTitle}>Quick Links</h3>
                         <ul className={styles.linkList}>
                             <li><Link href="/" className={styles.link}>Home</Link></li>
-                            <li><Link href="/about" className={styles.link}>About</Link></li>
-                            <li><Link href="/services" className={styles.link}>Services</Link></li>
-                            <li><Link href="/latest=news" className={styles.link}>Latest News</Link></li>
-                            <li><Link href="/team" className={styles.link}>Team</Link></li>
+                            <li><Link href="/" className={styles.link}>About</Link></li>
+                            <li><Link href="/" className={styles.link}>Services</Link></li>
+                            <li><Link href="/" className={styles.link}>Latest News</Link></li>
+                            <li><Link href="/" className={styles.link}>Team</Link></li>
                         </ul>
                     </div>
 
@@ -91,34 +90,32 @@ const FooterDuplicate = () => {
                     <div className={styles.listBox}>
                         <h3 className={styles.colTitle}>Areas we work in</h3>
                         <ul className={styles.linkList}>
-                            <li><Link href="/dermatologist" className={styles.link}>Dermatologist</Link></li>
-                            <li><Link href="/ent-specialist" className={styles.link}>ENT Specialist</Link></li>
-                            <li><Link href="/gynecologist" className={styles.link}>Gynecologist</Link></li>
-                            <li><Link href="/neurologist" className={styles.link}>Neurologist</Link></li>
-                            <li><Link href="/urologist" className={styles.link}>Urologist</Link></li>
-                            <li><Link href="/dentist" className={styles.link}>Dentist</Link></li>
+                            <li><Link href="/" className={styles.link}>Dermatologist</Link></li>
+                            <li><Link href="/" className={styles.link}>ENT Specialist</Link></li>
+                            <li><Link href="/" className={styles.link}>Gynecologist</Link></li>
+                            <li><Link href="/" className={styles.link}>Neurologist</Link></li>
+                            <li><Link href="/" className={styles.link}>Urologist</Link></li>
+                            <li><Link href="/" className={styles.link}>Dentist</Link></li>
                         </ul>
                     </div>
 
                     {/* Column 4: Contact */}
                     <div className={styles.contactBox}>
                         <h3 className={styles.colTitle}>Contact Us</h3>
-                        <div className={styles.contactInfo}>
-                            <div className={styles.contactItem}>
+                        <ul className={styles.contactInfo}>
+                            <li className={styles.contactItem}>
                                 <Mail size={18} />
                                 <p>fatmiyah@email.com</p>
-                            </div>
-                            <div className={styles.contactItem}>
+                            </li>
+                            <li className={styles.contactItem}>
                                 <Phone size={18} />
                                 <p>(704) 555-0127   <br />(208) 555-0112</p>
-
-
-                            </div>
-                            <div className={styles.contactItem}>
+                            </li>
+                            <li className={styles.contactItem}>
                                 <MapPin size={18} />
                                 <p>234 Main St, City, Country</p>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -128,9 +125,9 @@ const FooterDuplicate = () => {
                     <div className={styles.bottomLinks}>
                         <Link href="/privacy" className={styles.link}>Privacy & Policy</Link>
                         {/* {" | "} */}
-                        <Link href="/terms" className={styles.link}>Terms</Link>
-                        <Link href="/about" className={styles.link}>About us</Link>
-                        <Link href="/faq" className={styles.link}>FAQ</Link>
+                        <Link href="/" className={styles.link}>Terms</Link>
+                        <Link href="/" className={styles.link}>About us</Link>
+                        <Link href="/" className={styles.link}>FAQ</Link>
                     </div>
                 </div>
             </div>

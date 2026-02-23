@@ -2,7 +2,7 @@
     width: 100%;
     background: #fff;
     position: relative;
-    z-index: 10;
+    z-index: 1100;
 }
 
 /* Top Bar */
@@ -14,8 +14,8 @@
     /* Ensure visibility when sticky */
     max-width: 1920px;
     margin: 0 auto;
-    /* height: 69px; */
     position: relative;
+
 }
 
 .topBarContent {
@@ -23,7 +23,7 @@
     justify-content: flex-end;
     align-items: center;
     gap: 24px;
-    padding: 0 64px;
+    padding: 0 32px;
     box-sizing: border-box;
 }
 
@@ -64,6 +64,12 @@
     background-color: #10164f;
 }
 
+.registerImage,
+.loginImage {
+    width: 24px;
+    height: 24px;
+}
+
 /* Navbar */
 .navbar {
     position: sticky;
@@ -72,9 +78,9 @@
     align-items: center;
     /* border-bottom: 1px solid #eee; */
     padding: 0px 64px 0px 64px;
-    background-color: #EBF7FF;
+
     height: 131px;
-    max-width: 1920px;
+    /* max-width: 1920px; */
 }
 
 
@@ -85,7 +91,7 @@
     width: 100%;
     margin: 0 auto;
     max-width: 1920px;
-    padding: 0 40px;
+    /* padding: 0 40px; */
 }
 
 .logo {
@@ -93,6 +99,11 @@
     aspect-ratio: 203/107;
     transition: all 0.3s ease;
 
+}
+
+.image {
+    width: 203px;
+    height: 107px;
 }
 
 .mobileToggle {
@@ -115,7 +126,7 @@
     display: flex;
     gap: 40px;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .navLinks a {
@@ -164,87 +175,111 @@
     /* Ensure text remains white */
 }
 
-.dropdownToggle {
-    background: #fff;
-    cursor: pointer;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 16px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    font-size: 16px;
-    font-weight: 500;
-    color: #111;
-    padding: 18px 22px;
-    border-radius: 6px;
-    text-align: left;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    width: 200px;
-}
 
-.dropdownToggle:hover {
-    background-color: #f2f2f2;
-}
-
-.dropdownToggle:active {
-    color: var(--primary-green);
-}
-
-.dropdownToggle:focus {
-    outline: none;
-    background-color: #0d38b9;
-}
 
 .mobileContact {
     display: none;
 }
 
 
+@media(max-width:2560px) {
+    .navContent {
+        padding: 20px 60px;
+    }
+}
+
+@media(max-width:1920px) {
+    .navContent {
+        padding: 0;
+    }
+}
+
 /* RESPONSIVE: 1700px (Extra Large Desktop) */
 @media (max-width: 1600px) {
+    .navbar {
+        height: 110px;
+    }
 
+    .topBar {
+        padding: 4px 40px;
+    }
 
     .navContent {
-        padding: 0 40px;
-        max-width: 1520px;
+        max-width: 1440px;
     }
 
     .topBarContent {
-        padding: 10px 60px;
+        padding: 8px 32px;
     }
 
-    .mobileOnlyContact {
-        display: none !important;
+    .logo,
+    .image {
+        width: 180px;
+        height: 90px;
+        margin-top: -15px;
     }
 
-    .desktopOnlyContact {
-        display: block;
-        border: none;
-        outline: none;
+    .navLinks {
+        gap: 32px;
+    }
+
+    .contactBtnNav {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+
+    .donateBtn {
+        font-size: 14px;
+        width: 90px;
+        height: 30px;
+    }
+
+    .login {
+        font-size: 15px;
+    }
+
+    .navLinks a {
+        font-size: 15px;
+    }
+
+    .loginImage,
+    .registerImage {
+        width: 22px;
+        height: 20px;
     }
 }
 
 /* RESPONSIVE: 1440px (Desktop) */
 @media (max-width: 1440px) {
+    .navbar {
+        height: 100px;
+    }
 
-    .topBarContent,
     .navContent {
-        padding: 0 32px;
+        max-width: 1280px;
+    }
+
+    .logo,
+    .image {
+        width: 160px;
+        height: 80px;
+        /* margin-top: -15px; */
     }
 
     .navLinks {
-        gap: 30px;
+        gap: 24px;
     }
 
-    .mobileOnlyContact {
-        display: none !important;
+    .navLinks a {
+        font-size: 15px;
     }
 
+    .loginImage,
+    .registerImage {
+        width: 20px;
+        height: 20px;
+
+    }
 }
 
 /* RESPONSIVE: 1024px (Laptop/Large Tablet) */
@@ -252,6 +287,10 @@
 
     .topBarContent {
         padding: 0 24px;
+    }
+
+    .navbar {
+        height: 80px;
     }
 
     .navContent {
@@ -263,16 +302,43 @@
     }
 
     .navLinks a {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .contactBtnNav {
-        padding: 12px 24px;
+        padding: 10px 20px;
+        font-size: 12px;
     }
 
-    .mobileOnlyContact {
-        display: none !important;
+    .donateBtn {
+        width: 60px;
+        height: 20px;
+        font-size: 12px;
     }
+
+    .login,
+    .register {
+        font-size: 12px;
+    }
+
+    .topBar {
+        padding: 4px 40px 0px 4px;
+    }
+
+
+    .loginImage,
+    .registerImage {
+        width: 18px;
+        height: 18px;
+    }
+
+    .image,
+    .logo {
+        width: 120px;
+        height: 60px;
+        margin-top: -5px;
+    }
+
 }
 
 /* RESPONSIVE: 768px (Tablet) */
@@ -307,17 +373,35 @@
         position: fixed;
         top: 0;
         right: -100%;
-        width: 300px;
+        width: 100%;
+        /* Change to 100% for full overlay background if needed, or stick to 300px but add overlay */
+        max-width: 320px;
         height: 100vh;
-        background: #fff;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-        padding: 80px 32px;
-        transition: right 0.3s ease-in-out;
+        background: #FFFFFF;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        padding: 100px 40px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1000;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
+        border-left: 1px solid #f0f0f0;
     }
+
+    /* Add overlay when menu is open */
+    /* .mobileNavOpen::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+        z-index: 999;
+        opacity: 1;
+        pointer-events: auto;
+    } */
 
     .mobileNavOpen {
         right: 0;

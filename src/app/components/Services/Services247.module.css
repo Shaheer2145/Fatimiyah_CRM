@@ -1,180 +1,493 @@
 .serviceSection {
-    position: relative;
-    padding: 48px 64px;
-    color: #fff;
-    overflow: hidden;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../../assets/service.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-color: #09B200;
-    background-blend-mode: multiply;
-    z-index: 1;
+    display: flex;
+    padding: 0 48px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
 }
 
 .content {
-    position: relative;
-    z-index: 2;
-    padding: 0px 48px;
-    max-width: 1550px;
-    /* margin-left: 10%; */
     display: flex;
+    max-width: 1792px;
+    margin: 0 auto;
+    padding: 0 64px;
+    justify-content: space-between;
     align-items: center;
-    gap: 10%;
+    gap: 100px;
+    /* Increased gap for better breathing space between columns */
 }
 
-.textContent {
+.leftContent {
+    display: flex;
     flex: 1;
+    max-width: 650px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    /* height: 590px;  - Removed fixed height for flexibility */
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
 }
 
 .subHead {
-    font-size: 19px;
-    letter-spacing: 0.285px;
-    opacity: 0.9;
-    margin-bottom: 10px;
+    color: #D0474F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
     font-weight: 600;
-    line-height: 26px;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    /* gap: 12px; */
 }
 
+
+
 .heading {
-    font-size: 51px;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 56px;
     font-weight: 600;
-    line-height: 62px;
-    letter-spacing: 0.765px;
-    font-family: sans-serif;
-    margin-bottom: 40px;
+    line-height: 1.1;
 }
 
 .features {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
 }
 
 .featureItem {
     display: flex;
-    gap: 19px;
-    font-size: 20px;
+    gap: 24px;
+    align-items: flex-start;
 }
 
 .icon {
     width: 60px;
     height: 60px;
-    color: #fff;
-    opacity: 0.9;
     flex-shrink: 0;
 }
 
-.featureItem h3 {
-    font-size: 27px;
-    font-weight: 700;
-    letter-spacing: 0.405px;
-    margin-bottom: 10px;
-    line-height: normal;
-    font-family: sans-serif;
+.leftContentBox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.serviceheading {
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .featureItem p {
-    font-size: 20px;
-    line-height: normal;
-    opacity: 0.8;
-    font-weight: 500;
-    letter-spacing: 0.3px;
+    color: #141414;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
-/* RESPONSIVE: 780px */
-@media (max-width: 780px) {
+.rightContent {
+    flex: 1;
+    max-width: 700px;
+    min-height: 650px;
+    /* Added min-height to ensure space for absolute elements */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layoutEffectContainer {
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    left: 60%;
+    transform: translate(-30%, -50%) rotate(15deg);
+}
+
+.layoutEffect {
+    width: 406px;
+    height: 572px;
+    border-radius: 20px;
+    background: #FBEDEE;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.Image {
+    width: 558px;
+    height: 594px;
+    border-radius: 20px;
+    background: url("../../assets/ServiceImageORg2.png") lightgray 50% / cover no-repeat;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.Box {
+    width: 259px;
+    height: 200px;
+    border-radius: 20px;
+    border: 5px solid #FFF;
+    background: url("../../assets/serviceOrgImage1.jpg") lightgray 50% / cover no-repeat;
+    position: absolute;
+    bottom: 8%;
+    left: -15%;
+    /* Refined position for better overlap balance */
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+@media (max-width: 1600px) {
+    .content {
+        padding: 0 48px;
+        gap: 80px;
+    }
+
+    .leftContent {
+        gap: 28px;
+    }
+
+    .heading {
+        font-size: 48px;
+    }
+
+    .Image {
+        width: 500px;
+        height: 540px;
+    }
+
+    .Box {
+        width: 220px;
+        height: 180px;
+        left: -6%;
+        bottom: 10%;
+    }
+
+    .layoutEffectContainer {
+        left: 55%;
+        top: 44%;
+    }
+
+    .layoutEffect {
+        width: 380px;
+        height: 500px;
+        transform: rotate(-3deg);
+    }
+
+    .serviceheading {
+        font-size: 22px;
+    }
+
+}
+
+@media (max-width: 1440px) {
     .serviceSection {
-        padding: 40px 32px;
+        padding: 20px 48px;
     }
 
     .content {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 0;
-        padding: 0;
-        gap: 32px;
+        gap: 60px;
     }
 
-    .overlay {
-        background-size: cover;
+    .leftContent {
+        gap: 28px;
     }
 
     .heading {
         font-size: 42px;
-        line-height: 52px;
-        margin-bottom: 30px;
     }
 
-    .features {
-        gap: 36px;
-        width: 100%;
+    .serviceheading {
+        font-size: 20px;
+    }
+
+    .featureItem p {
+        font-size: 12px;
+    }
+
+    .rightContent {
+        max-width: 600px;
+        min-height: 550px;
+    }
+
+    .Image {
+        width: 460px;
+        height: 500px;
+    }
+
+    .layoutEffectContainer {
+        left: 60%;
+        top: 45%;
+    }
+
+    .layoutEffect {
+        width: 340px;
+        height: 450px;
+        transform: rotate(2deg);
+    }
+
+    .Box {
+        width: 200px;
+        height: 160px;
+        left: -10%;
     }
 }
 
-/* RESPONSIVE: 480px */
-@media (max-width: 480px) {
-    .serviceSection {
-        padding: 32px 20px;
+@media (max-width: 1024px) {
+    .content {
+        gap: 40px;
+        padding: 0 32px;
+    }
+
+    .leftContent {
+        gap: 20px;
     }
 
     .heading {
         font-size: 36px;
-        line-height: 42px;
+    }
+
+    .serviceheading {
+        font-size: 18px;
+    }
+
+    .featureItem p {
+        font-size: 11px;
+    }
+
+
+    .features {
+        gap: 20px;
+    }
+
+    /* .icon {
+        width: 40px;
+        height: 40px;
+        gap: 10px;
+    } */
+
+    .rightContent {
+        max-width: 450px;
+        min-height: 480px;
+    }
+
+    .Image {
+        width: 300px;
+        height: 400px;
+    }
+
+    .layoutEffectContainer {
+        left: 53%;
+        top: 45%;
+    }
+
+    .layoutEffect {
+        width: 280px;
+        height: 380px;
+        transform: rotate(2deg);
+    }
+
+    .Box {
+        width: 160px;
+        height: 120px;
+        left: -13%;
+        bottom: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .serviceSection {
+        padding: 60px 24px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        gap: 60px;
+    }
+
+    .leftContent {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .header {
+        align-items: center;
+    }
+
+    .features {
+        align-items: center;
     }
 
     .featureItem {
         flex-direction: column;
-        gap: 12px;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
     }
 
-    .icon {
-        width: 48px;
-        height: 48px;
+    .rightContent {
+        width: 100%;
+        min-height: 500px;
+        margin-top: 10px;
     }
 
-    .featureItem h3 {
-        font-size: 24px;
+    .Image {
+        width: 420px;
+        height: 450px;
     }
 
-    .featureItem p {
-        font-size: 16px;
-        line-height: 1.4;
+    .layoutEffectContainer {
+        left: 62%;
+        top: 45%;
+    }
+
+    .layoutEffect {
+        width: 320px;
+        height: 410px;
+        transform: rotate(2deg);
+    }
+
+    .Box {
+        width: 220px;
+        height: 160px;
+        left: -25%;
     }
 }
 
-/* RESPONSIVE: 360px */
-@media (max-width: 360px) {
+@media (max-width: 426px) {
     .serviceSection {
-        padding: 24px 16px;
+        padding: 40px 16px;
+    }
+
+    .heading {
+        font-size: 30px;
     }
 
     .subHead {
         font-size: 16px;
     }
 
-    .heading {
-        font-size: 30px;
-        line-height: 38px;
-    }
-
     .features {
-        gap: 24px;
+        gap: 28px;
     }
 
-    .featureItem h3 {
-        font-size: 22px;
+    .rightContent {
+        height: 400px;
+        min-height: 400px;
+    }
+
+    .Image {
+        width: 260px !important;
+        height: 300px !important;
+    }
+
+    .layoutEffectContainer {
+        left: 52%;
+        top: 45%;
+    }
+
+    .layoutEffect {
+        width: 220px;
+        height: 280px;
+        transform: rotate(-4deg);
+    }
+
+    .Box {
+        width: 140px;
+        height: 100px;
+        border-width: 6px;
+        left: 0;
+        bottom: 15%;
+    }
+}
+
+@media (max-width: 376px) {
+    .heading {
+        font-size: 26px;
+    }
+
+    .serviceheading {
+        font-size: 16px;
+    }
+
+    .rightContent {
+        height: 360px;
+        min-height: 360px;
+    }
+
+    .Image {
+        width: 240px !important;
+        height: 280px !important;
+    }
+
+    .layoutEffectContainer {
+        left: 50%;
+        top: 40%;
+    }
+
+    .layoutEffect {
+        width: 210px;
+        height: 290px;
+        transform: rotate(-2deg);
+    }
+
+    .Box {
+        width: 100px;
+        height: 100px;
+        left: -2%;
+    }
+}
+
+@media (max-width: 320px) {
+    .heading {
+        font-size: 24px;
     }
 
     .featureItem p {
-        font-size: 15px;
+        font-size: 11px;
+    }
+
+    .rightContent {
+        height: 320px;
+        min-height: 320px;
+    }
+
+    .Image {
+        width: 220px !important;
+        height: 250px !important;
+    }
+
+    .layoutEffectContainer {
+        left: 50%;
+        top: 40%;
+    }
+
+    .layoutEffect {
+        width: 180px;
+        height: 250px;
+        transform: rotate(2deg);
+    }
+
+    .Box {
+        width: 100px;
+        height: 80px;
     }
 }

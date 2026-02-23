@@ -1,17 +1,13 @@
 'use client';
 import Link from 'next/link';
-import { Phone, Mail, User, LayoutDashboard, LogOut, Menu, X } from 'lucide-react';
+import { LayoutDashboard, LogOut, Menu, X } from 'lucide-react';
 import styles from './Header.module.css';
 import Image from "next/image";
 import Login from "../../assets/Login.svg";
 import signup from "../../assets/signup.png";
 import logo from "../../assets/fatmiyahLogo.png";
-import { useAuth } from '@/hooks/useAuth';
-import departments from "../../../lib/mockData/departments.json"
 import { useState, useRef, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
 
 
 
@@ -20,6 +16,7 @@ import { ChevronDown } from 'lucide-react';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeItem, setActiveItem] = useState('Home');
     const pathname = usePathname();
     const dropdownRef = useRef(null);
 
@@ -42,14 +39,14 @@ const Header = () => {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
-    const { user, logout } = useAuth();
+    // const { user, logout } = useAuth();
 
-    const getDashboardPath = () => {
-        if (!user) return '/';
-        if (user.role === 'admin') return '/dashboard/admin';
-        if (user.role === 'doctor') return '/dashboard/doctor';
-        return '/dashboard/patient';
-    };
+    // const getDashboardPath = () => {
+    //     if (!user) return '/';
+    //     if (user.role === 'admin') return '/dashboard/admin';
+    //     if (user.role === 'doctor') return '/dashboard/doctor';
+    //     return '/dashboard/patient';
+    // };
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -57,13 +54,18 @@ const Header = () => {
 
     const navItems = [
         { label: 'Home', href: '/' },
-        { label: 'About Us', href: '/about' },
-        { label: 'Schedule', href: '/schedule' },
-        { label: 'Facilities', href: '/facilities' },
-        { label: 'Online Lab Report', href: '/online-lab-report' },
-        { label: 'Dr Schedule', href: '/dr-schedule' },
+        { label: 'About Us', href: '/' },
+        { label: 'Schedule', href: '/' },
+        { label: 'Facilities', href: '/' },
+        { label: 'Online Lab Report', href: '/' },
+        { label: 'Dr Schedule', href: '/' },
 
     ];
+
+    const handleItemClick = (label) => {
+        setActiveItem(label);
+        setIsMobileMenuOpen(false); // Close mobile menu on click
+    };
 
     return (
         <header className={styles.header}>
@@ -71,28 +73,16 @@ const Header = () => {
             <div className={styles.topBar}>
                 <div className={styles.topBarContent}>
                     <div className={styles.topLinks}>
-                        {user ? (
-                            <>
-                                <Link href={getDashboardPath()} className="flex items-center gap-1 hover:text-blue-200">
-                                    <LayoutDashboard size={14} />
-                                    Dashboard
-                                </Link>
-                                <span>|</span>
-                                <button onClick={logout} className="flex items-center gap-1 hover:text-red-300">
-                                    <LogOut size={14} />
-                                    Logout
-                                </button>
-                            </>
-                        ) : (
-                            <>
-                                <Image src={Login} alt='login' />
-                                <Link className={styles.login} href="/login">Login</Link>
 
-                                <Image src={signup} alt='login' />
-                                <Link className={styles.login} href="/register">Register</Link>
-                            </>
-                        )}
-                        <Link href="/donate" className={styles.donateBtn}>Donate</Link>
+
+                        <Image src={Login} alt='login' className={styles.registerImage} />
+                        <Link className={styles.login} href="/">Login</Link>
+
+                        <Image src={signup} alt='login' className={styles.loginImage} />
+                        <Link className={styles.login} href="/">Register</Link>
+
+
+                        <Link href="/" className={styles.donateBtn}>Donate</Link>
                     </div>
                 </div>
             </div>
@@ -103,7 +93,7 @@ const Header = () => {
 
                     <div className={styles.logo}>
                         <Link href="/">
-                            <Image src={logo} alt="Logo" />
+                            <Image src={logo} alt="Logo" className={styles.image} />
                         </Link>
                     </div>
 
@@ -116,10 +106,11 @@ const Header = () => {
                     <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.mobileNavOpen : ''}`}>
                         <ul className={styles.navLinks}>
                             {navItems.map((item) => (
-                                <li key={item.href}>
+                                <li key={item.label}>
                                     <Link
                                         href={item.href}
-                                        className={pathname === item.href ? styles.active : ''}
+                                        className={activeItem === item.label ? styles.active : ''}
+                                        onClick={() => handleItemClick(item.label)}
                                     >
                                         {item.label}
                                     </Link>
@@ -127,7 +118,7 @@ const Header = () => {
 
                             ))}
                             <li className={styles.mobileContact}>
-                                <Link href="/contact" className={styles.contactBtnNav}>
+                                <Link href="/" className={styles.contactBtnNav}>
                                     Contact Us
                                 </Link>
                             </li>
@@ -166,7 +157,7 @@ const Header = () => {
                         </ul>
                     </nav>
                     <div className={styles.desktopOnlyContact}>
-                        <Link href={"/contact"} className={styles.contactBtnNav}>Contact Us</Link>
+                        <Link href={"/"} className={styles.contactBtnNav}>Contact Us</Link>
                     </div>
                 </div>
             </div>
