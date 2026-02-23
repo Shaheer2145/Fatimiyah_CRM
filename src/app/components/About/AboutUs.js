@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { Trophy, Award } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import styles from './AboutUs.module.css';
-import aboutImg from "../../assets/AboutImage.png";
+import aboutImg from "@/assets/AboutImage.png";
 
 // Mock avatar images (can be replaced with real assets if available)
 

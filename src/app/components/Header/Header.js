@@ -1,11 +1,11 @@
 'use client';
 import Link from 'next/link';
-import {  Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import styles from './Header.module.css';
 import Image from "next/image";
-import Login from "../../assets/Login.svg";
-import signup from "../../assets/signup.png";
-import logo from "../../assets/fatmiyahLogo.png";
+import Login from "@/assets/Login.svg";
+import signup from "@/assets/signup.png";
+import logo from "@/assets/fatmiyahLogo.png";
 import { useState, useRef, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 

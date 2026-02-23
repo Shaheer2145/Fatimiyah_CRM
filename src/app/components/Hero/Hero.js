@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import styles from './Hero.module.css';
 import Image from 'next/image';
-import herobgImage from "../../assets/HeroImageORg.png";
+import herobgImage from "@/assets/HeroImageORg.png";
 import { motion } from 'framer-motion';
 
 const Hero = () => {
