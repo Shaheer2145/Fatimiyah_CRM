@@ -39,7 +39,8 @@ const Header = () => {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
-    // const { user, logout } = useAuth();
+    // const { user, logout } = useAuth(); // Commented out to resolve build error (missing provider)
+    const user = null; // Stubbed for build
 
     // const getDashboardPath = () => {
     //     if (!user) return '/';

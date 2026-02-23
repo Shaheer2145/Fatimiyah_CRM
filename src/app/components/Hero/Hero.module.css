@@ -224,8 +224,8 @@
     }
 
     .heroContent {
-        left: 110px;
-        bottom: 40%;
+        left: 140px;
+        bottom: 46%;
     }
 
     .headline {
@@ -245,7 +245,7 @@
 
     .formContainer {
         bottom: 12%;
-        max-width: 1120px;
+        max-width: 1180px;
         width: 100%;
         height: 140px;
     }
@@ -254,6 +254,49 @@
     .formBox {
         height: 140px;
     }
+
+
+}
+@media(max-width:1520px){
+    
+
+    .heroSection,
+    .heroFrame {
+        height: 700px;
+    }
+
+    .heroContent {
+        left: 110px;
+        bottom: 44%;
+    }
+
+    .headline {
+        font-size: 64px;
+        /* max-width: 680px; */
+        /* font-weight: 800; */
+        line-height: 65px;
+    }
+
+    .formBox {
+        gap: 20px;
+        padding: 30px;
+        width: 86%;
+    }
+
+
+
+    .formContainer {
+        bottom: 14%;
+        max-width: 1180px;
+        width: 100%;
+        height: 140px;
+    }
+
+    .searchBtn,
+    .formBox {
+        height: 140px;
+    }
+
 
 
 }

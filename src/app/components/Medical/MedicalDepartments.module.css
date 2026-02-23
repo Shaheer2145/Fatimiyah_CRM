@@ -162,11 +162,11 @@
     .grid,
     .header {
         padding-left: 90px;
-        max-width: 1220px;
+        max-width: 1300px;
     }
 
     .heading {
-        max-width: 1220px;
+        max-width: 1180px;
     }
 
     .card {
@@ -184,6 +184,7 @@
     .grid,
     .header {
         padding-left: 90px;
+        max-width: 1200px;
     }
 
     .heading {
