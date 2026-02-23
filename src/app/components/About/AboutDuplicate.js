@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Stethoscope } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import styles from './AboutDuplicate.module.css';
 import aboutImg from "../../assets/aboutImg.png";

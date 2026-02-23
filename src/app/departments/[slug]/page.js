@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
-import departments from "@/lib/mockData/departments/index";
+
 import { FileText } from 'lucide-react';
 
 // import { ScheduleModal } from '@/app/components/DoctorList/DoctorModals';

@@ -20,7 +20,7 @@ import child from "../../assets/Child.png";
 import dentist from "../../assets/dentist.png";
 import obesity from "../../assets/obesity.png";
 
-import scheduleData from '@/lib/mockData/weeklySchedule.json';
+
 
 const departments = [
     { name: 'All', icon: null, slug: 'all' },
