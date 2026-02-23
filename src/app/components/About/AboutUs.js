@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 import styles from './AboutUs.module.css';
-import aboutImg from "../../app/assets/AboutImage.png";
+import aboutImg from "../../assets/AboutImage.png";
 
 // Mock avatar images (can be replaced with real assets if available)
 
