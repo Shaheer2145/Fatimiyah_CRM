@@ -146,7 +146,7 @@
 
 @media(max-width:2560px) {
     .grid {
-        width: 97.5%;
+        width: 93%;
     }
 }
 
@@ -163,10 +163,11 @@
     .header {
         padding-left: 90px;
         max-width: 1300px;
+        
     }
 
     .heading {
-        max-width: 1150px;
+        max-width: 1110px;
     }
 
     .card {
@@ -185,10 +186,11 @@
     .header {
         padding-left: 90px;
         max-width: 1200px;
+        
     }
 
     .heading {
-        max-width: 1100px;
+        max-width: 1200px;
     }
 
     .card {
@@ -209,12 +211,14 @@
 
     .grid,
     .header {
-        padding-left: 90px;
+        padding-left: 70px;
+        max-width: 1150px;
+        width: 100%;
     }
 
-    .heading {
-        width: 1060px;
-    }
+    /* .heading {
+        max-width: 1110px;
+    } */
 
     .card {
         width: 250px;

@@ -1,12 +1,13 @@
 .faqSection {
     background-color: #fafafa;
+    padding: 60px 0;
 }
 
 .faqContent {
     align-items: flex-start;
     display: flex;
     max-width: 1792px;
-    padding: 0 48px;
+    padding: 0 64px;
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
@@ -123,7 +124,7 @@
 @media (max-width: 1520px) {
     .faqContent {
         max-width: 1360px;
-        padding: 0 40px;
+        padding: 0 48px;
     }
 
     .imagePlaceholder {
