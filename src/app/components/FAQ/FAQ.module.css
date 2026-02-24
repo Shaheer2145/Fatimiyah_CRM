@@ -28,6 +28,10 @@
 
 .textColumn {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    flex-shrink: 0;
 }
 
 .heading {
@@ -102,6 +106,14 @@
     color: #D0474F;
 }
 
+.answer {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.27px;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
 /* RESPONSIVE: 1600px */
 @media (max-width: 1600px) {
     .faqContent {
@@ -110,8 +122,8 @@
     }
 
     .imagePlaceholder {
-        width: 580px;
-        height: 587px;
+        width: 600px;
+        height: 600px;
     }
 
     .heading {
@@ -159,8 +171,11 @@
     }
 
     .imagePlaceholder {
-        width: 420px;
-        height: 425px;
+        width: 430px;
+        height: 500px;
+    }
+    .accordion{
+        gap: 0px;
     }
 
     .heading {
@@ -168,9 +183,10 @@
         line-height: 42px;
     }
 
-    .questionHead h3 {
+    .questionHead h3,.answer {
         font-size: 16px;
     }
+
 }
 
 /* RESPONSIVE: 768px (Tablet Stack) */
@@ -216,6 +232,9 @@
     }
 
     .questionHead h3 {
+        text-align: left;
+    }
+    .answer{
         text-align: left;
     }
 }

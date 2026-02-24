@@ -65,7 +65,7 @@ const FAQ = () => {
                                             className={styles.answerBody}
                                         >
                                             <div className={styles.answerContent}>
-                                                <p>{item.answer}</p>
+                                                <p className={styles.answer}>{item.answer}</p>
                                             </div>
                                         </motion.div>
                                     )}

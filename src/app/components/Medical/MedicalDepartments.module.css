@@ -45,7 +45,7 @@
     align-items: center;
     justify-content: space-between;
     max-width: 1489px;
-    width: 100%;
+    width: 91%;
 
 }
 
@@ -161,14 +161,12 @@
 
     .grid,
     .header {
-        padding-left: 90px;
-        max-width: 1300px;
+        padding-left: 70px;
+        /* max-width: 1300px; */
         
     }
 
-    .heading {
-        max-width: 1110px;
-    }
+    
 
     .card {
         width: 250px;
@@ -184,13 +182,13 @@
 
     .grid,
     .header {
-        padding-left: 90px;
+        padding-left: 80px;
         max-width: 1200px;
         
     }
 
     .heading {
-        max-width: 1200px;
+        width: 100%;
     }
 
     .card {
@@ -216,9 +214,9 @@
         width: 100%;
     }
 
-    /* .heading {
-        max-width: 1110px;
-    } */
+    .heading {
+        width: 99%;
+    }
 
     .card {
         width: 250px;
@@ -275,7 +273,7 @@
 
 
     .heading {
-        width: 740px;
+        width: 99%;
     }
 
     .card {
