@@ -12,7 +12,7 @@
     display: flex;
     width: 100%;
     max-width: 1600px;
-    padding: 48px 194px 0 125px;
+    padding: 48px 0px 0 0px;
     justify-content: space-between;
     align-items: flex-start;
     gap: 48px;
@@ -32,6 +32,14 @@
 
 .logo {
     margin-bottom: 24px;
+
+}
+
+.logoImg {
+    width: 172px;
+    height: 90px;
+    flex-shrink: 0;
+    aspect-ratio: 86/45;
 }
 
 .brandText {
@@ -119,9 +127,8 @@
 
 .contactInfo {
     display: flex;
-    width: 195px;
+    width: 205px;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     gap: 19px;
 }
@@ -161,6 +168,12 @@
 .mapThumb:hover {
     transform: scale(1.02);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.mapImg {
+    width: 283px;
+    height: 157px;
+    aspect-ratio: 137/76;
 }
 
 .mapPlaceholder {
@@ -241,18 +254,24 @@
 @media (max-width: 1600px) {
     .container {
         padding: 60px 48px 20px;
-        gap: 32px;
+        gap: 40px;
         max-width: 1440px;
     }
 }
 
 @media (max-width: 1440px) {
     .container {
-        max-width: 1280px;
+        max-width: 1340px;
     }
 
     .colTitle {
         font-size: 18px;
+    }
+
+    .mapImg {
+        width: 193px;
+        height: 107px;
+        aspect-ratio: 107/76;
     }
 
     .brandText,

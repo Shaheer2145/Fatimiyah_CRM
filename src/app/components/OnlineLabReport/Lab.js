@@ -1,11 +1,18 @@
 'use client'
 // Original code commented out to resolve build errors
-/*
 import { useState } from "react";
 import styles from "../OnlineLabReport/lab.module.css";
 
 
-const Lab = () => {
+const Lab = ({ labData }) => {
+
+    const block = labData?.layout?.find(b => b.blockType === 'formBlock');
+    const formConfig = block?.form;
+    const heroTitle = labData?.hero?.richText?.root?.children[0]?.children[0]?.text || "Online Lab Reports";
+    const introText = block?.introContent?.root?.children[0]?.children[0]?.text || "Please enter details.";
+    const PAYLOAD_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+    const bgImage = labData?.hero?.media?.url ? `${PAYLOAD_URL}${labData.hero.media.url}` : null;
+
 
     const initialState = {
         userID: "",
@@ -65,37 +72,38 @@ const Lab = () => {
     return (
         <>
             <section className={styles.labPage}>
-                <div className={styles.labPageBox}>
+                <div className={styles.labPageOverlay} style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}></div>
+                <div className={styles.mainTitle}>
+                    <h1 className={styles.labmainTitleText}>{heroTitle}</h1>
+                </div>
+                <div className={styles.labPageBox} >
                     <div className={styles.content}>
-                        <h1>Online Lab Reports</h1>
-                        <p>Please enter login details as mentioned on your Lab Slip.</p>
+                        <h1>{heroTitle}</h1>
+                        <p>{introText}</p>
                     </div>
                     <div className={styles.labForm}>
                         <form className={styles.labFormfields} onSubmit={handleSubmitBtn}>
-                            <label>
-                                <input
-                                    type="email"
-                                    placeholder='User ID'
-                                    name="userID"
-                                    onChange={handleChange}
-                                    value={labForm.userID}
 
-                                />
-                            </label>
-                            <label>
-                                <input
-                                    type="password"
-                                    placeholder='PIN Code'
-                                    name="pin"
-                                    onChange={handleChange}
-                                    value={labForm.pin}
-                                />
-                            </label>
+                            {formConfig?.fields?.map((field) => (
+                                <div key={field.id} className={styles.inputWrapper}> {/* Use a div instead of label */}
+                                    {/* <label htmlFor={field.blockName}>{field.label}</label> */}
+                                    <input
+                                        id={field.blockName}
+                                        type={field.blockName === 'pinCode' ? 'password' : 'email'}
+                                        placeholder={field.label}
+                                        name={field.blockName}
+                                        onChange={handleChange}
+                                        value={labForm[field.blockName] || ""}
+                                        className={styles.inputField} // Ensure this matches your CSS
+                                    />
+                                </div>
+                            ))}
+
                             <button
                                 className={styles.submitBtn}
                                 type="submit"
                             >
-                                Sign In
+                                {formConfig?.submitButtonLabel || "Sign In"}
                             </button>
                             {error && <p style={{ color: 'red', marginTop: '1rem' }}>{error}</p>}
                         </form>
@@ -110,14 +118,5 @@ const Lab = () => {
 }
 
 export default Lab;
-*/
 
-export default function Lab() {
-    return (
-        <div style={{ padding: '40px', textAlign: 'center' }}>
-            <h1>Lab Reports</h1>
-            <p>This page is temporarily disabled to resolve build errors.</p>
-            <a href="/" style={{ color: '#2ecc71', textDecoration: 'underline' }}>Back to Home</a>
-        </div>
-    );
-}
+

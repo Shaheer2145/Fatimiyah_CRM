@@ -11,7 +11,7 @@
     border-radius: 24px;
     display: flex;
     justify-content: left;
-    /* width: 1792px; */
+    max-width: 1792px;
     height: 752px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -26,7 +26,6 @@
     z-index: 1;
     border-radius: 24px;
     background: linear-gradient(90deg, rgba(0, 174, 239, 0.80) 0%, rgba(0, 0, 0, 0.00) 62.89%), lightgray -24.177px -85.491px / 117.086% 171.058% no-repeat;
-
 }
 
 .heroImage {
@@ -117,8 +116,9 @@
     padding: 0 36.414px;
     /* flex: 1; */
     height: 159.31px;
-    gap: 78px;
+    gap: clamp(20px, 4vw, 78px);
     background: var(--Text-and-Main-White, #FFF);
+    width: 100%;
 }
 
 /* .searchBar {
@@ -257,8 +257,9 @@
 
 
 }
-@media(max-width:1520px){
-    
+
+@media(max-width:1520px) {
+
 
     .heroSection,
     .heroFrame {

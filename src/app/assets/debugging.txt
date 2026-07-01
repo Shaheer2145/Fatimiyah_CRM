@@ -1,0 +1,47 @@
+======================================================================
+                         📌 MY SCRATCHPAD 📌
+======================================================================
+
+Debugging Techniques
+
+CSS Check in Website
+
+When a website's layout breaks or elements aren't aligning correctly, 
+inspecting and debugging your CSS is the fastest way to find the culprit 
+Here is a quick-reference guide on how to perform a thorough 
+CSS check using browser Developer Tools (DevTools)
+
+1. Open the Inspector: Right-click on the problematic element on your 
+  webpage and select "Inspect" (or press F12 / Cmd + Option + I)
+
+2. Verify the Box Model: Use the DevTools layout panel to check the 
+  element's padding, border, and margin. Unexpected spacing is 
+  often caused by default browser margins or forgotten padding.
+
+3. Track Down Overridden Styles: Look at the Styles tab. If a CSS rule 
+  has a strikethrough line, it means another rule with higher specificity 
+  or a later cascade position is overriding it.
+4.Toggle Styles on the Fly: Uncheck the boxes next to individual CSS 
+  properties in DevTools to temporarily disable them. This helps isolate 
+  exactly which property is causing the visual bug.
+5. The "Outline" Trick for Misalignments: If elements are overflowing 
+  or you can't find what is causing an accidental horizontal scrollbar, 
+  add a temporary global outline in your styles:
+  
+  Kese check krun?
+
+Website par jaa kar right-click karein aur Inspect (F12) dabayein.
+Network tab me jayein.
+Page ko Refresh (Ctrl + F5) karein.
+Upar filters me CSS par click karein.
+
+
+Yahan aapko un saari CSS files ki list dikhegi jo us page par load ho rahi hain. 
+Agar koi plugin ya theme ka CSS wahan load ho raha hai jiska us page par koi kaam nahi (e.g., contact form ki CSS home page par), toh wo page ko slow kar rahi hai.
+
+Pro Tip: Chrome DevTools me Ctrl + Shift + P dabayein, "Coverage" type karein aur enter marein. Wahan "Start instrumenting" par click karein. 
+Wo aapko exact percentage bata dega ke kaunsi CSS file ka kitna % hissa is page par Unused (zaya) pada hai.
+
+======================================================================
+Generated on: 2026-05-19
+======================================================================

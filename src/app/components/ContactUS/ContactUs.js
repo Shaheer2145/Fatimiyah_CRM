@@ -3,7 +3,27 @@ import { useState } from 'react';
 import styles from "../ContactUS/Contact.module.css";
 import { MapPin, Phone, Mail } from "lucide-react";
 
-function ContactUs() {
+function ContactUs({ contactData }) {
+    if (contactData) {
+        console.log('the contact page has been connected', contactData);
+
+    }
+
+    const contactBlock = contactData?.layout?.find(b => b.blockType === 'content');
+    console.log(contactBlock);
+
+    const formBlock = contactData?.layout?.find(b => b.blockType === 'formBlock');
+    console.log(formBlock);
+
+    const formFields = formBlock?.form?.fields || [];
+    console.log(formFields);
+
+    const contactInfo = contactBlock?.columns?.[0]?.groupSection;
+    console.log(contactInfo);
+    const PAYLOAD_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+    const bgImage = contactData?.hero?.media?.url ? `${PAYLOAD_URL}${contactData.hero.media.url}` : null;
+    const heroTitle = contactData?.hero?.richText?.root?.children[0]?.children[0]?.text || "Online Lab Reports";
+
     const initialState = {
         firstName: "",
         lastName: "",
@@ -40,22 +60,22 @@ function ContactUs() {
     }
 
 
-    const handleSubmitForm = async(e) => {
+    const handleSubmitForm = async (e) => {
 
 
         e.preventDefault();
-        
+
         setLoading(true);
         const validateError = validateForm();
-        if(validateError){
+        if (validateError) {
             setError("Invalid");
             return;
         }
         try {
-            const res = await fetch("/api/contact",{
-                method:"POST",
-                headers:{"Content-type":"application/json"},
-                body:JSON.stringify(formData)
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-type": "application/json" },
+                body: JSON.stringify(formData)
             })
         } catch (error) {
             setError(error.message);
@@ -77,34 +97,34 @@ function ContactUs() {
             message: ""
         });
     }
+    const getIcon = (text) => {
+        if (text.includes('@')) return <Mail />;
+        if (text.includes('021')) return <Phone />;
+        return <MapPin />;
+    };
     return (
         <>
-            <section className={styles.contactPage}>
+            <section className={styles.contactPage} style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                <div className={styles.labPageOverlay}></div>
+                <div className={styles.mainTitle}>
+                    <h1 className={styles.mainTitleText}>{heroTitle}</h1>
+                </div>
                 <div className={styles.contactBox}>
                     <div className={styles.left_part}>
                         <div className={styles.leftContent}>
-                            <h1>Get In Touch With Us </h1>
-                            <p>You can contact Fatimiyah Hospital by calling us on our number and by email on address or you can visit below given location.</p>
+                            <h1>{contactInfo?.mainTitle}</h1>
+                            <p>{contactInfo?.description?.root?.children[0]?.children[0]?.text}</p>
                         </div>
                         <div className={styles.contactWays}>
-                            <div className={styles.location}>
-                                <span className={styles.iconCircle}>
-                                    <MapPin size={30} className={styles.icon} />
-                                </span>
-                                <p>Soldier Bazar, Garden East, Karachi</p>
-                            </div>
-                            <div className={styles.contact}>
-                                <span className={styles.iconCircle}>
-                                    <Phone size={30} className={styles.icon} />
-                                </span>
-                                <p>contact@fh.org.pk</p>
-                            </div>
-                            <div className={styles.telephone}>
-                                <span className={styles.iconCircle}>
-                                    <Mail size={30} className={styles.icon} />
-                                </span>
-                                <p>021 111 012 014</p>
-                            </div>
+
+                            {contactInfo?.features?.map((f) => (
+                                <div key={f.id} className={styles.contactItem}>
+                                    <span className={styles.iconCircle}>
+                                        {getIcon(f.FeatureText)}
+                                    </span>
+                                    <p>{f.FeatureText}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                     <div className={styles.right_part}>
@@ -115,57 +135,41 @@ function ContactUs() {
                             {error &&
                                 <p>{error}</p>
                             }
-                            <form>
-                                <input
-                                    type='text'
-                                    placeholder='First Name'
-                                    className={styles.form}
-                                    value={formData.firstName}
-                                    name="firstName"
-                                    onChange={handleChange}
-                                    required
-                                />
-                                <input
-                                    type='text'
-                                    placeholder='Last Name'
-                                    className={styles.form}
-                                    value={formData.lastName}
-                                    name="lastName"
-                                    onChange={handleChange}
-                                    required
-                                />
-                                <input
-                                    type='email'
-                                    placeholder='Email'
-                                    className={styles.form}
-                                    value={formData.email}
-                                    name="email"
-                                    onChange={handleChange}
-                                // required
-                                />
-                                <input
-                                    type='text'
-                                    placeholder='Subject'
-                                    className={styles.form}
-                                    value={formData.subject}
-                                    name="subject"
-                                    onChange={handleChange}
-                                    required
-                                />
-                                <textarea
-                                    placeholder='Message...'
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    name='message'
-                                >
-                                </textarea>
-
+                            <form onSubmit={handleSubmitForm}>
+                                {formFields.map((field) => {
+                                    // Check if the field is a textarea
+                                    if (field.blockType === 'textarea') {
+                                        return (
+                                            <textarea
+                                                key={field.id}
+                                                placeholder={field.label}
+                                                name={field.name || "message"} // Ensure name matches your state
+                                                value={formData[field.name] || ""}
+                                                onChange={handleChange}
+                                                required={field.required}
+                                                className={styles.formInput}
+                                            />
+                                        );
+                                    }
+                                    return (
+                                        <input
+                                            key={field.id}
+                                            type={field.blockType === 'email' ? 'email' : 'text'}
+                                            placeholder={field.label}
+                                            name={field.name}
+                                            value={formData[field.name] || ""}
+                                            onChange={handleChange}
+                                            required={field.required}
+                                            className={styles.formInput}
+                                        />
+                                    );
+                                })}
                                 <button
                                     className={styles.submitBtn}
                                     onClick={handleSubmitForm}
                                     type='submit'
                                 >
-                                    {loading ? "Sending..." : "Submit"}
+                                    {loading ? "Sending..." : formBlock?.form?.submitButtonLabel}
                                 </button>
 
                                 {successMsg &&

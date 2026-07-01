@@ -1,0 +1,292 @@
+/* --- Hero Section Styles (Replicated from Hero.module.css) --- */
+.heroSection {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 752px;
+    padding: 0 64px;
+    position: relative;
+    background: white;
+}
+
+.heroFrame {
+    border-radius: 24px;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1792px;
+    height: 752px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.heroImageWrapper {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 11, 71, 0.8) 0%, rgba(0, 0, 0, 0) 62.89%);
+    z-index: 1;
+}
+
+.heroContent {
+    position: absolute;
+    left: 154px;
+    bottom: 268px;
+    color: #FFF;
+    z-index: 10;
+    max-width: 867px;
+    display: flex;
+    flex-direction: column;
+}
+
+.headline {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 81px;
+    letter-spacing: -3.2px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+}
+
+.subHeadline {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif;
+    color: #E6F0FD;
+}
+
+/* --- Facilities Grid Styles (Replicated from MedicalDepartments.module.css) --- */
+.gridSection {
+    padding: 100px 64px;
+    background: white;
+    width: 100%;
+}
+
+.gridContainer {
+    max-width: 1792px;
+    padding: 80px 100px;
+    margin: 0 auto;
+    background: #E6F0FD;
+    border-radius: 48px;
+}
+
+.header {
+    margin-bottom: 60px;
+}
+
+.subTitle {
+    color: #D0474F;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.card {
+    padding: 40px 32px;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.iconWrapper {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000B47;
+    font-family: "Poppins", sans-serif;
+}
+
+.cardDesc {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #666;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+}
+
+/* --- Comfort Section Styles (Replicated from Services247.module.css) --- */
+.comfortSection {
+    padding: 100px 64px;
+    background: white;
+}
+
+.comfortContainer {
+    max-width: 1792px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 48px 64px;
+}
+
+.comfortLeft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.comfortRight {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.imageMain {
+    width: 558px;
+    height: 594px;
+    border-radius: 24px;
+    object-fit: cover;
+    z-index: 5;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.imageAccent {
+    width: 406px;
+    height: 572px;
+    border-radius: 24px;
+    background: #FBEDEE;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-30%, -50%) rotate(10deg);
+    z-index: 1;
+}
+
+.comfortBadge {
+    display: inline-flex;
+    align-items: center;
+    background: #FFE9EA;
+    color: #D0474F;
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 1440px) {
+    .headline {
+        font-size: 64px;
+        line-height: 1.1;
+    }
+
+    .heroContent {
+        left: 100px;
+    }
+
+    .gridContainer {
+        padding: 60px;
+    }
+
+    .comfortContainer {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .heroSection,
+    .heroFrame {
+        height: 600px;
+    }
+
+    .headline {
+        font-size: 48px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .comfortContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .comfortLeft {
+        align-items: center;
+    }
+
+    .imageMain {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding: 0 24px;
+        height: 500px;
+    }
+
+    .heroContent {
+        left: 40px;
+        bottom: 150px;
+    }
+
+    .headline {
+        font-size: 36px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gridSection,
+    .comfortSection {
+        padding: 60px 24px;
+    }
+
+    .comfortBadge {
+        justify-content: center;
+    }
+}

@@ -11,7 +11,6 @@
     padding: 8px 40px;
     font-size: 14px;
     background-color: #fff;
-    /* Ensure visibility when sticky */
     max-width: 1920px;
     margin: 0 auto;
     position: relative;
@@ -36,10 +35,26 @@
 }
 
 .login {
+    
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.phone {
+    
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.letter {
     /* border: 2px solid red; */
     font-size: 16px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
+    text-decoration: underline;
 }
 
 .donateBtn {
@@ -64,8 +79,21 @@
     background-color: #10164f;
 }
 
+.linkItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navText {
+    display: inline;
+    /* Desktop par text normal dikhega */
+}
+
 .registerImage,
-.loginImage {
+.loginImage,
+.letterImage,
+.phoneImage {
     width: 24px;
     height: 24px;
 }
@@ -345,8 +373,8 @@
 @media (max-width: 768px) {
     .topBar {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        flex-direction: row;
     }
 
     .navbar {
@@ -446,7 +474,19 @@
 }
 
 /* RESPONSIVE: 425px (Large Mobile) */
-@media (max-width: 425px) {
+@media (max-width: 426px) {
+    .topBar {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+    }
+
+    .topBarContent,
+    .topBar {
+        padding: 0;
+    }
+
     .navbar {
         padding: 12px 20px;
     }
@@ -464,12 +504,20 @@
         gap: 20px;
     }
 
-    .login {
+    .login,
+    .phone,
+    .letter {
         font-size: 12px;
     }
 
+    .phoneImage,
+    .letterImage {
+        width: 20px;
+        height: 20px;
+    }
+
     .topLinks {
-        padding: 0 30px;
+        padding: 0 10px;
     }
 
     .donateBtn {
@@ -478,13 +526,22 @@
 }
 
 /* RESPONSIVE: 375px (Medium Mobile) */
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     .navbar {
         padding: 10px 16px;
     }
 
     .logo {
         width: 100px;
+    }
+
+    .navText {
+        display: none;
+        /* Mobile par sara text hide ho jayega */
+    }
+    .topBarContent{
+        justify-content: center;
+        padding: 10px 0px;
     }
 
     .nav {
@@ -494,6 +551,7 @@
 
 /* RESPONSIVE: 320px (Small Mobile) */
 @media (max-width: 320px) {
+    
     .navbar {
         padding: 8px 12px;
     }

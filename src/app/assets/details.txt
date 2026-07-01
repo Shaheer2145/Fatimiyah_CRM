@@ -1,0 +1,190 @@
+A. Screen aur Display (Sab se zaroori)
+Screen Burn/Shade: Google par "Pure White Image" search karke full screen par dekhein. Agar screen pinkish hai ya niche icons ke nishaan (burn) nazar aa rahe hain, toh woh unit Reject kar dein.
+Dead Pixels: Screen ko full brightness par alag alag colors (Red, Green, Blue) mein dekhein ke kahin koi kaala nukta toh nahi.
+B. PTA aur Authenticity Check
+Official vs CPID: *#06# dial karein aur IMEI ko 8484 par SMS karein.
+
+Agar reply mein wahi model (Pixel 7/7a) aur "Compliant" likha aaye, toh woh Official hai.
+
+Agar reply mein kisi aur phone ka naam (Nokia, G-Five) aaye, toh woh CPID/Patch hai. Iske paise kam honay chahiye.
+
+Hardware Check: Play Store se CPU-Z ya DevCheck app install karein. Check karein ke Processor "Google Tensor G2" hi ho. (Fake phones mein MTK processor hota hai).
+
+Star City Mall, Saddar mein kaam kafi "tricky" hota hai, isliye wahan kisi bhi anjaan shop par bharosa karne ke bajaye in trusted naam-o-nishan par jayye:
+
+1. Reliable Shops in Star City Mall
+In shops ki reputation Google Pixels ke liye market mein behtar hai:
+
+HF Smartphones: Inka stock aksar saaf hota hai aur ye Pixels mein kafi purane hain.
+
+UZ Tech / Rebel Tech: Ye log technical details (jaise CPID vs Official) mein kafi clear baat karte hain.
+
+Khareedo Mobile: Agar aapne installments ki baat karni hai, toh ye ek option ho sakta hai.
+
+2. Pixel 7 / 7a Checking Guide (Step-by-Step)
+Jab shopkeeper aapko phone haath mein de, toh bina jaldi kiye ye tests karein:
+
+A. Screen aur Display (Sab se zaroori)
+Screen Burn/Shade: Google par "Pure White Image" search karke full screen par dekhein. Agar screen pinkish hai ya niche icons ke nishaan (burn) nazar aa rahe hain, toh woh unit Reject kar dein.
+
+Dead Pixels: Screen ko full brightness par alag alag colors (Red, Green, Blue) mein dekhein ke kahin koi kaala nukta toh nahi.
+
+B. PTA aur Authenticity Check
+Official vs CPID: *#06# dial karein aur IMEI ko 8484 par SMS karein.
+
+Agar reply mein wahi model (Pixel 7/7a) aur "Compliant" likha aaye, toh woh Official hai.
+
+Agar reply mein kisi aur phone ka naam (Nokia, G-Five) aaye, toh woh CPID/Patch hai. Iske paise kam honay chahiye.
+
+Hardware Check: Play Store se CPU-Z ya DevCheck app install karein. Check karein ke Processor "Google Tensor G2" hi ho. (Fake phones mein MTK processor hota hai).
+
+C. Physical aur Hardware Inspection
+Body & Seals: Phone ke edges ko ghaur se dekhein. Agar screen body se thori bahar nikli hui hai ya gum ke nishaan hain, toh phone Khula hua (Opened/Repaired) ho sakta hai.
+
+Camera: Front aur Back dono cameras se photos lein. Autofocus check karein aur video record karke mic ki awaaz sunein.
+
+Speakers & Port: Dono stereo speakers check karein aur charging port mein cable laga kar dekhein ke "Rapidly Charging" likha aa raha hai ya nahi.
+D. Connectivity
+Fingerprint & Face Unlock: Dono ko set karke check karein ke fast kaam kar rahe hain.
+
+Wi-Fi & Bluetooth: Connect karke check karein ke signal drop toh nahi ho rahe.
+C. Physical aur Hardware Inspection
+Saddar ke phones aksar "Refurbished" hote hain (baher se khulay hue), inhein aise pakrein:
+
+The "Gap" Test: Phone ki screen aur body ke darmiyan ghaur se dekhein. Agar kahin se halki si light nazar aa rahi hai ya screen body se thori "unchee" (raised) hai, toh phone ki screen badli hui hai.
+
+Camera Focus: Camera app khol kar kareeb ki cheez par tap karein, phir door ki cheez par. Agar focus "hunting" kar raha hai ya focus nahi ho raha, toh lens ka masla hai.
+
+Port Tightness: Charging cable laga kar phone ko halka sa hilayein. Agar charging baar baar disconnect ho rahi hai, toh port loose hai.
+
+Mic & Speakers: Recorder app khol kar kuch bol kar record karein. Phir dono speakers (upar wala aur neeche wala) ka sound check karein. Pixel mein stereo speakers hote hain, dono se barabar awaaz aani chahiye.
+
+D. Connectivity (Networking)
+Phone ke signal aur sensors check karna lazmi hai:
+
+Wi-Fi Strength: Shop ke Wi-Fi se connect karein aur check karein ke signal bars full hain ya nahi. Dur khare ho kar bhi check karein ke signals drop toh nahi ho rahe.
+
+Biometrics: Settings mein ja kar Fingerprint aur Face Unlock lazmi register karein. Agar fingerprint sensor kaam nahi kar raha (Pixel 7/7a mein optical hota hai), toh screen shayad sasti wali copy lagi hui hai.
+
+Sensor Test: Call milayein aur haath phone ke upar (proximity sensor) par rakhein. Screen band honi chahiye. Agar band nahi ho rahi, toh sensors mein masla hai.
+
+Bluetooth: Apne Buds ya doosre phone se connect karke file share kar ke dekhein.
+Settings > System > Developer Options (agar on ho sakay) mein ja kar "OEM Unlocking" check karein. Agar yeh greyed out hai aur likha hai "Contact your carrier", toh woh phone "MDM Locked" ya "Verizon/AT&T" ka locked unit ho sakta hai jo aagey chal kar software updates mein masla karega. Hamesha koshish karein ke "Factory Unlocked" unit lein.
+
+1. Developer Options On Kaise Karein?
+Shop par phone pakarte hi sab se pehle ye karein:
+
+Settings > About Phone mein jayen.
+
+Niche scroll karke "Build Number" par 7 baar jaldi jaldi tap karein.
+
+Likha aayega: "You are now a developer!"
+
+Ab wapis Settings > System > Developer Options mein jayen.
+
+2. "OEM Unlocking" Check Karein
+Developer options ke andar aapko aik toggle (button) nazar aayega jis par likha hoga "OEM Unlocking".
+
+Scenario A (Best): Button on ho raha hai ya off hai lekin toggle karne ki ijazat de raha hai. Iska matlab hai phone Factory Unlocked hai. Aap future mein iska bootloader unlock kar sakte hain aur koi bhi custom ROM daal sakte hain.
+
+Scenario B (Danger): Button Greyed Out hai (yani aap usay daba nahi sakte) aur niche likha hai "Connect to the internet or contact your carrier".
+
+Internet connect karne ke baad bhi greyed out rahe: Toh iska matlab hai ye phone Verizon ya kisi aur US carrier ka hai jisne bootloader ko permanently lock kiya hua hai.
+
+Nuksaan: Aise phones aksar software updates mein masla karte hain aur inki resale value Karachi mein kam hoti hai kyunke in par "Patch" lagana mushkil hota hai.
+
+3. "MDM Lock" Kya Hota Hai? (Bohat Zaroori)
+Agar Developer options mein ya notification bar mein kahin likha nazar aaye ke "This device is managed by an organization", toh phone foran wapis kar dein.
+
+Wajah: Iska matlab hai ye phone kisi company ka hai (jaise koi bank ya software house apne employees ko deta hai). Woh log kisi bhi waqt remote baith kar aapka phone lock kar sakte hain. Karachi mein log aksar aise phones chori ke ya fraud ke zariye market mein bech dete hain.
+
+4. ADB Testing (Agar aap apna Laptop sath le jayen)
+Chunkay aap software engineer hain, agar aap apna laptop sath le jayen aur USB cable lagayen:
+
+adb shell getprop ro.boot.flash.locked command run karein.
+
+Is se aapko phone ki asli lock/unlock state pata chal jayegi jo shopkeeper aksar chupate hain.
+
+
+Chunkay aap Software Engineer hain, aap ki nazar "details" par honi chahiye:
+
+1. Panel (Display) ki Fitting: "The Flashlight Test"
+Saddar mein saste units mein aksar copy panels lage hote hain.
+
+Fitting: Apne mobile ki flashlight on karke screen ke kinaron (edges) par ghaur se dekhein. Agar kahin se light leak ho rahi hai ya screen frame se thori "unchee" (raised) mehsoos ho rahi hai, toh woh 100% refurbished/repaired hai.
+
+Chin (Neeche wala border): Pixel 7a ka neeche wala bezel (kaali patti) thora mota hota hai. Agar copy panel hoga, toh ye border original se bhi zyada mota ya "un-even" nazar aayega.
+
+Oleophobic Coating: Screen par halka sa pani ka qatra girayen. Agar pani phail jaye, toh woh sasti glass copy hai. Agar pani aik "motay" qatray ki shakal mein jama rahe, toh woh original coating hai.
+
+2. Body Finish aur Texture
+Metal vs Plastic: Pixel 7 ka frame aluminum ka hota hai jabke 7a ka frame bhi metal hai lekin back plastic ki hai. Refurbished bodies mein aksar sasta plastic use hota hai jo tap karne par "khokhla" (hollow) sound karta hai.
+
+Antenna Lines: Phone ke edges par jo choti choti lines hoti hain (antenna lines), unhein ungli se touch karein. Original body mein ye lines bilkul smooth hoti hain. Refurbished/Changed housing mein ye lines thori "khurdari" (rough) mehsoos hoti hain.
+
+3. SIM Tray aur LDI (Water Damage)
+Color Match: SIM tray nikal kar body ke color se match karein. Agar shades mein 1% bhi farq hai, toh housing change hui hai.
+
+The LDI Dot: SIM tray nikal kar andar torch se dekhein. Wahan ek chota sa white dot nazar aayega. Agar woh Pink ya Red hai, toh phone pani mein gir chuka hai aur usay repair karke becha ja raha hai.
+
+4. Charging Port aur Buttons
+Port Condition: Port ke andar dekhein. Agar copper ke pins par scratches hain ya bohat zyada mitti hai, toh phone "Roughly Used" hai.
+
+Button Click: Power aur Volume buttons ko daba kar dekhein. Original buttons mein aik "crisp" click ki awaaz aati hai. Refurbished bodies mein ye buttons aksar "dheele" (loose) ya "naram" (mushy) hote hain.
+
+Ek "Khaas" Mashwara (The Seal Test):
+Saddar mein log "Water Pack" keh kar phone bechte hain. Check karne ke liye:
+
+SIM tray bahar nikalen.
+
+SIM tray wale hole mein zor se foonk (blow) marein.
+
+Agar aapko mehsoos ho ke hawa kahin se leak ho rahi hai (e.g., speakers ya port se), toh phone khula hua hai.
+
+Agar hawa ka pressure wapis mehsoos ho (pressure build-up), toh iska matlab phone Sealed hai.
+
+
+Star City Mall mein jab aap Pixel 7 ya 7a pakdenge, toh "Original" aur "Refurbished/Repaired" ka farq in barikiayon se pata chalega. Ek Software Engineer ki nazar se ye checklist follow karein:
+
+1. Panel (Display)
+Original: Colors bilkul vibrant honge. Full brightness par white background mein koi pinkish ya yellowish "shade" nahi hoga. Touch 100% smooth hoga.
+
+Refurbished: Aksar "Copy OLED" ya "Hard OLED" laga hota hai. Iska touch thora "heavy" hota hai. Agar aap screen ko side se (angle se) dekhenge toh colors change (blue/green tint) nazar aayenge. Bezel (kaali patti) original se zyada moti hogi.
+
+2. Camera Screen & Lens
+Original: Lens ke glass ke andar bilkul safai hogi. Google ki coating ki wajah se lens par halka "purple/blue" reflection nazar aayega.
+
+Refurbished: Agar lens ke andar mitti ka ek zarra (dust) bhi hai, toh 100% phone khula hua hai. Refurbished units mein lens ka glass aksar sasta hota hai, jis par fingerprints bohat jaldi chap jate hain aur saaf nahi hote.
+
+3. Bezel (Screen Borders)
+Original: Charon taraf ke borders bilkul barabar (symmetrical) honge (7a mein bottom bezel thora mota hota hai, par finish smooth hogi). Screen aur frame ke darmiyan koi gap nahi hoga.
+
+Refurbished: Agar screen badli hui hai, toh borders kahin se patle aur kahin se motay nazar ayenge. Kinaron par ghaur se dekhein, agar "elify" ya "black glue" ke halkay se nishaan hain, toh woh refurb hai.
+
+4. Back Body (Housing)
+Original: Pixel 7 ki back glass hai aur 7a ki "Thermoformed Polycarbonate" (high-quality plastic). Tap karne par solid awaaz aayegi. Google ka 'G' logo bilkul flush (smooth) hoga.
+
+Refurbished: Sasti "Housing" lagai jati hai jo tap karne par "khokhli" (hollow) awaaz deti hai. Housing ka rang aur camera bar ka rang aksar thora sa alag (mismatch) hota hai.
+
+5. Software (Internal Health)
+Original: Software updates direct Google se aayengi. "OEM Unlocking" toggle settings mein enable ho sakega. adb shell getprop ro.boot.flash.locked check karne par status sahi dikhayega.
+
+Refurbished/Patched: "System Update" karne par PTA block hone ka darr hota hai. Agar phone Rooted hai ya Developer Options mein "OEM Unlocking" greyed-out hai, toh woh carrier-locked ya patched refurbished unit hai.
+
+6. SIM Tray
+Original: Tray ka rang body ke metal frame se 100% match karega. Tray ke upar ek choti rubber seal (waterproofing ke liye) lagi hogi.
+
+Refurbished: Tray ka rang thora fika ya dark ho sakta hai. Aksar rubber seal gayab hoti hai kyunke local trays mein seal nahi aati.
+
+7. Charging Port
+Original: Port ke andar ke pins bilkul sunehri (golden) aur saaf honge. Cable lagane par "Click" ki awaaz aayegi aur connection tight hoga.
+
+Refurbished: Port ke gird scratches honge. Agar port replace hua hai, toh fast charging (PD charging) aksar kaam nahi karti ya phone computer se connect (ADB) nahi hota.
+
+8. Sensors (Biometrics & Proximity)
+Original: Fingerprint sensor "Optical" hota hai, screen par halka sa tap karne par foran khul jayega. Proximity sensor (call ke waqt screen band hona) foran response dega.
+
+Refurbished: Copy screens par fingerprint ya toh kaam nahi karta ya bohat slow hota hai. Call ke waqt kaan ke pas le jane par screen band nahi hoti (sensor alignment issue).
+
+Final Pro-Tip for Tomorrow:
+Jab phone finalize kar rahe hon, toh ##4636###** dial karein. "Phone Information" mein jayen aur check karein ke signals ki strength stable hai ya nahi.

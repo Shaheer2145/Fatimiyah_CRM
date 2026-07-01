@@ -1,0 +1,152 @@
+.statsSection {
+    display: flex;
+    padding: 0 48px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.content {
+    display: flex;
+    max-width: 1792px;
+    margin: 0 auto;
+    padding: 0 64px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    
+}
+
+.section_container {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats_wrapper {
+    width: 100%;
+    max-width: 1792px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 30px 15px;
+    background-color: #ffffff;
+}
+
+.stat_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.icon_box {
+    color: #00334e;
+
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon_box svg {
+    width: 83px;
+    height: 83px;
+    stroke: #00334e;
+}
+
+.stat_number {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 47px;
+    font-weight: 800;
+    color: #174c63;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+}
+
+.stat_label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #888888;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+    
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 1520px) {
+    .stats_wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        padding: 20px 10px;
+    }
+
+    .icon_box svg {
+        width: 63px;
+        height: 63px;
+        stroke: #00334e;
+    }
+
+    .stat_number {
+        font-size: 32px;
+    }
+
+    .stat_label {
+        font-size: 14px !important;
+    }
+
+}
+
+@media (max-width: 1025px) {
+    .content {
+        padding: 0 16px;
+    }
+
+    .icon_box svg {
+        width: 53px;
+        height: 53px;
+        stroke: #00334e;
+    }
+
+    .stats_wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        padding: 20px 10px;
+        /* max-width: 1000px; */
+        width: 1000px;
+    }
+
+    .stat_number {
+        font-size: 28px;
+    }
+
+    .stat_label {
+        font-size: 12px !important;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .stats_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats_wrapper {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,26 +1,23 @@
 import './globals.css'
 
-import { Katibeh } from 'next/font/google';
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import getGlobals from "../lib/getGlobal";
 
 
-const katibeh = Katibeh({
-    weight: '400',
-    subsets: ['latin'],
-    display: 'swap',
-});
 
-export const metadata = {
-    title: 'Fatimiyah Hospital',
-    description: 'Health Solutions in every Stage of Life',
-}
 
-export default function RootLayout({ children }) {
+
+export default async function RootLayout({ children }) {
+    const headerData = await getGlobals('header');
+    const footerData = await getGlobals('footer');
+
     return (
         <html lang="en">
-            <body className={katibeh.className}>
-
+            <body>
+                <Header headerData={headerData} />
                 {children}
-
+                <Footer footerData={footerData} />
             </body>
         </html>
     )

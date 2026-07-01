@@ -18,7 +18,7 @@
 .imagePlaceholder {
     width: 660px;
     height: 668px;
-    background-image: url("../../assets/faqdoct.png");
+    /* background-image: url("../../assets/faqdoct.png"); */
     background-position: left;
     /* background-position: left; */
     background-repeat: no-repeat;
@@ -174,7 +174,8 @@
         width: 430px;
         height: 500px;
     }
-    .accordion{
+
+    .accordion {
         gap: 0px;
     }
 
@@ -183,7 +184,8 @@
         line-height: 42px;
     }
 
-    .questionHead h3,.answer {
+    .questionHead h3,
+    .answer {
         font-size: 16px;
     }
 
@@ -234,7 +236,8 @@
     .questionHead h3 {
         text-align: left;
     }
-    .answer{
+
+    .answer {
         text-align: left;
     }
 }

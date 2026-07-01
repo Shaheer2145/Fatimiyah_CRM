@@ -130,7 +130,9 @@
     width: 558px;
     height: 594px;
     border-radius: 20px;
-    background: url("../../assets/ServiceImageORg2.png") lightgray 50% / cover no-repeat;
+    /* background: url("../../assets/ServiceImageORg2.png") lightgray 50% / cover no-repeat; */
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     z-index: 5;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);

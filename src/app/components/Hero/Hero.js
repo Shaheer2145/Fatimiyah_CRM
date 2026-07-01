@@ -6,7 +6,24 @@ import Image from 'next/image';
 import herobgImage from "../../assets/HeroImageORg.png";
 import { motion } from 'framer-motion';
 
-const Hero = () => {
+const Hero = ({ data }) => {
+    // data is the Payload hero group field: { type, richText, media, links }
+    // The visual layout below is custom-designed and hardcoded.
+    // Payload data can be used to override specific fields in the future.
+    if (data) console.log('Hero data from Payload:', data);
+    const PAYLOAD_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+    console.log(PAYLOAD_URL);
+
+    const renderContent = (content) => {
+        if (!content) return null;
+        return content.root?.children?.map((block, i) => (
+            <span key={i}>
+                {block.children?.map((child, j) => child.text).join(' ')}
+                <br />
+            </span>
+        ));
+    };
+
     return (
         <section className={styles.heroSection}>
             <div className={styles.heroFrame}>
@@ -16,8 +33,25 @@ const Hero = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
+
+
                     >
-                        <Image src={herobgImage} alt="image" className={styles.image} />
+                        <Image
+                            src={data?.media ? `${PAYLOAD_URL}${data.media.url}` : herobgImage}
+                            alt={data?.media?.alt || 'Hero Image'}
+                            width={data?.media?.sizes?.xlarge?.width || 1920}
+                            height={data?.media?.sizes?.xlarge?.height || 752}
+                            className={styles.image}
+                            priority
+                            unoptimized={true}
+                            onError={(e) => {
+                                console.error("Hero Image failed to load:", e);
+                                // Fallback is already set in src if data.media is null, 
+                                // but we could also dynamically swap here if needed.
+                            }}
+                        />
+                        <div className={styles.overlay}></div>
+
                     </motion.div>
                     <div className={styles.heroContent}>
                         <motion.h1
@@ -26,8 +60,12 @@ const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                         >
-                            Health Solutions  <br />
-                            in every Stage of Life
+                            {renderContent(data?.richText) || (
+                                <>
+                                    Health Solutions
+                                    in every Stage of Life
+                                </>
+                            )}
                         </motion.h1>
                         {/* <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -86,7 +124,9 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className={styles.searchBtn}>
-                        <button className={styles.btn}>Booking</button>
+                        <button className={styles.btn}>
+                            Booking
+                        </button>
                     </div>
 
                 </div>
