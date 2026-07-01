@@ -56,17 +56,6 @@ const FAQ = ({ data }) => {
     }
     const faqItems = parseFaqData(faqPart?.groupSection?.description)
 
-
-
-
-
-
-
-
-
-
-
-
     return (
         <section className={`section-padding ${styles.faqSection}`}>
             <div className={styles.faqContent}>
