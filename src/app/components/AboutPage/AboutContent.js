@@ -12,11 +12,11 @@ const extractText = (richText) => {
         .filter(Boolean)
         .join('\n\n');
 };
-export const dynamic = 'force-dynamic';
+
 const AboutContent = ({ data }) => {
     if (!data || !data.layout) return null;
 
-     const PAYLOAD_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+    const PAYLOAD_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
     const layout = data?.layout;
 
 

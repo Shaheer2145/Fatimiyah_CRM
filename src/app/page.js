@@ -18,7 +18,7 @@ export default async function Home() {
   let successData=null;
   let newsData = null;
   let faqData = null;
-  const dynamic = 'force-dynamic';
+  
   const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
   const res = await fetch(
     `${baseUrl}/api/pages/699ec8f9ab2a9047c20669f3?depth=3&draft=false&locale=undefined&trash=false`,
