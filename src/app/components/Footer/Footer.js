@@ -131,7 +131,7 @@ const Footer = ({ footerData }) => {
                 <div variants={itemVariants} className={styles.col}>
                     <h3 className={styles.colTitle}>{quickLinksTitle}</h3>
                     <ul className={styles.links}>
-                        {quickLinks?.map((item,index) => (
+                        {quickLinks?.map((item,index ) => (
                             <li key={index}>
                                 <Link href={item.href} >{item.label}
                                 </Link></li>
